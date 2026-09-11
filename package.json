@@ -1,0 +1,17 @@
+{
+  "name": "machina-practica-site",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "24.18.1", "npm": "11.16.0" },
+  "packageManager": "npm@11.16.0",
+  "scripts": {
+    "build": "eleventy",
+    "test": "playwright test",
+    "verify": "npm run build && npm test",
+    "serve": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "@playwright/test": "1.63.0"
+  }
+}

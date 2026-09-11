@@ -38,3 +38,11 @@ Recorded 2026-09-11 from human maintainer. PR: pending organization creation and
 > yes
 
 Recorded 2026-09-11 from human maintainer. PR: pending organization creation and transfer. Confirms SETUP_MP.md as the execution brief. SETUP_MP.md, SETUP_PROPOSAL.md, and OURWAY_PROPOSAL.md are imported planning artifacts; this agent did not author their research or original text.
+
+---
+
+> Read SETUP_MD.md and follow its directions.
+
+> yes
+
+Recorded 2026-09-11 from human maintainer. Repeated verbatim from the bootstrap entries above to associate the same instructions with the separate website PR (pending). The confirmation refers to SETUP_MP.md. This branch prepares the website tracer and its build/evidence/deployment workflow.
