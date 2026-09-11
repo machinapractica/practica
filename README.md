@@ -7,9 +7,9 @@ Two connected books express the same thesis:
 - **Effective Agents** helps human programmers frame, supervise, review, and integrate agent work to produce software that matches their intent.
 - **Machina Practica** gives agents and maintainers operational rules, skills, and repository conventions for exact, reliable work.
 
-Skills will turn that method into repeatable workflows. Independently released [`@machinapractica/*` packages](https://github.com/machinapractica/packages) will contain field-tested implementation mechanics. They have separate compatibility and release responsibilities.
+[Eight experimental skills](docs/SKILLS.md) turn that method into phase-scoped workflows. Independently released [`@machinapractica/*` packages](https://github.com/machinapractica/packages) will contain field-tested implementation mechanics. They have separate compatibility and release responsibilities.
 
-This repository is pre-release. It contains the vision, prompt-provenance enforcement, and imported proposals. Book manuscripts, executable skills, and a plugin are not yet available. The package proposal is not a package catalog.
+This repository is pre-release. It contains the vision, prompt-provenance enforcement, and imported proposals. An experimental skill plugin is available in source and can be packaged locally. Book manuscripts are not yet available. The package proposal is not a package catalog.
 
 ## Read and contribute
 

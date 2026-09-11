@@ -1,0 +1,22 @@
+# End-to-end evidence
+
+Machina Practica evidence contract: 1.0.0
+Profile: web-playwright
+Project adaptations: record chosen viewports, actors, local fixtures and scope.
+Canonical baseline environment: record the pinned OS/browser/font environment and reviewer.
+
+## Observable outcome
+
+Describe what the blank shell actually exposes and how source identity is visible. List unimplemented product behavior plainly. Link each scenario to its ordinary action and semantic outcome; generate its walkthrough from completed step receipts.
+
+## Run and retain
+
+Document the one verifier command, production server command, bounded startup check, fixed clocks/seeds, bundled assets, network allowlist and per-worker storage. Link actual logs, traces, capture receipts and source/artifact hashes. Capture candidates after semantics and presentation readiness. A failed test retains partial evidence and remains failed.
+
+## Review and delivery
+
+Define the candidate review record (hash, source, platform, reviewer), exact-pixel policy if selected, and cross-platform limits. CI must retain failure artifacts. A trusted preview publisher must validate repository/PR/run/head/artifact identity and never execute untrusted artifact code or overwrite production/unrelated previews. State external delivery that has actually been verified.
+
+## Limits
+
+List untested browsers, native/hardware behavior, external credentials and production-only services. Local fixtures prove only the scenarios executed. Never infer baseline approval from a generated screenshot or deployment from a green build.

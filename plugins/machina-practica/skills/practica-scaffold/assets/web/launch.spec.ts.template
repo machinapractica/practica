@@ -1,0 +1,15 @@
+// Adapt to a selected, pinned Playwright project. This is a test fragment, not an app generator.
+import { test, expect } from '@playwright/test';
+
+test('ordinary startup exposes an honest shell and source identity', async ({ page }, info) => {
+  await page.goto('/');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(PROJECT_TITLE);
+  await expect(page.getByText('Not implemented yet', { exact: true })).toBeVisible();
+  await expect(page.getByTestId('source-revision')).toHaveText(SOURCE_REVISION);
+  const screenshot = await page.screenshot({ animations: 'disabled' });
+  await info.attach('startup-candidate', { body: screenshot, contentType: 'image/png' });
+  await info.attach('walkthrough.md', {
+    body: Buffer.from('Opened the ordinary entry; verified the project title, blank status, and source revision; captured a candidate screenshot.'),
+    contentType: 'text/markdown'
+  });
+});

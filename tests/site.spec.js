@@ -23,7 +23,7 @@ test('read the landing page and follow the books, method, and proposals', async 
   await test.step('Open the ordinary home page and verify truthful status', async () => {
     await page.goto('/');
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('Make intentexecutable.');
-    await expect(page.getByText('Book manuscripts and executable skills are not yet available.', { exact: false })).toBeVisible();
+    await expect(page.getByText('Eight experimental skills are available in source.', { exact: false })).toBeVisible();
     await expect(page.locator('footer a').filter({ hasText: 'Source' })).toHaveAttribute('href', 'https://github.com/machinapractica/practica/commit/' + revision);
     await record('01-home');
   });
@@ -36,7 +36,7 @@ test('read the landing page and follow the books, method, and proposals', async 
   });
   await test.step('Follow the method to its proposed workflow', async () => {
     await page.getByRole('navigation').getByRole('link', { name: 'Method', exact: true }).click();
-    await expect(page.getByText('No executable skills or installable plugin are available yet.', { exact: false })).toBeVisible();
+    await expect(page.getByText('Status: experimental skills available in source.', { exact: false })).toBeVisible();
     await page.getByRole('link', { name: 'project setup proposal', exact: true }).click();
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Staged software-project setup');
     await expect(page.getByText('Status: research proposal', { exact: false })).toBeVisible();
@@ -44,7 +44,7 @@ test('read the landing page and follow the books, method, and proposals', async 
   });
   await test.step('Read the package status', async () => {
     await page.getByRole('navigation').getByRole('link', { name: 'Packages', exact: true }).click();
-    await expect(page.getByText('No packages are available from this project.', { exact: false })).toBeVisible();
+    await expect(page.getByText('Status: experimental implementations, not yet published to npm.', { exact: false })).toBeVisible();
     await expect(page.getByRole('link', { name: 'package extraction proposal' })).toHaveAttribute('href', 'https://github.com/machinapractica/packages/blob/main/docs/proposals/PACKAGE_EXTRACTION_PROPOSAL.md');
   });
   expect(failures).toEqual([]);

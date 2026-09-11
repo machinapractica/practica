@@ -1,0 +1,34 @@
+{
+  "name": "machina-practica",
+  "version": "0.1.0",
+  "description": "Phase-scoped project skills and evidence contracts for disciplined agent-assisted development.",
+  "author": {
+    "name": "Machina Practica",
+    "url": "https://machinapractica.com"
+  },
+  "homepage": "https://machinapractica.com/method/",
+  "repository": "https://github.com/machinapractica/practica",
+  "license": "GPL-3.0-only",
+  "keywords": [
+    "project-method",
+    "skills",
+    "evidence"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Machina Practica",
+    "shortDescription": "Project phases with clear document boundaries",
+    "longDescription": "Phase-scoped project skills and evidence contracts for disciplined agent-assisted development.",
+    "developerName": "Machina Practica",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://machinapractica.com",
+    "defaultPrompt": [
+      "Define the vision for my project.",
+      "Audit this project\u2019s phase boundaries."
+    ]
+  }
+}

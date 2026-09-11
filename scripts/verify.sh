@@ -14,6 +14,8 @@ run() {
     exit "$result"
   fi
 }
+run skills python3 -m unittest discover -s plugins/machina-practica/scripts -p 'test_*.py'
+run plugin python3 plugins/machina-practica/scripts/validate_bundle.py --archive .artifacts/machina-practica-0.1.0.zip
 run dependencies npm ci --ignore-scripts
 run browser npx --no-install playwright install chromium
 run verification npm run verify
