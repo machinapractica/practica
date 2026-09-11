@@ -88,3 +88,5 @@ Publication reference (2026-09-11): the domain-launch continuation above produce
 Recorded 2026-09-11 from human maintainer. PRs: pending reusable skills and package implementation. Source repositories are read-only evidence; no consumer migrations or new projects are authorized.
 
 PR reference for the 2026-09-11 reusable-components prompt: https://github.com/machinapractica/practica/pull/6. This PR contains the eight skills, shared resources and validation; it performs no source-repository migration or new-project creation.
+
+Distribution follow-up for PR #6: retain the validated plugin ZIP with CI evidence so the reusable bundle can be downloaded without global installation or generating a project.

@@ -38,6 +38,8 @@ jobs:
             evidence/
             test-results/
             playwright-report/
+            .artifacts/
+          include-hidden-files: true
           retention-days: 14
       - name: Upload verified production artifact
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
