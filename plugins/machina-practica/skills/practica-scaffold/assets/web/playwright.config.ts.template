@@ -1,0 +1,21 @@
+// Adapt the production-server command and project-selected viewports. Pin Playwright in package-lock.json.
+import { defineConfig } from '@playwright/test';
+export default defineConfig({
+  testDir: './tests/e2e',
+  forbidOnly: !!process.env.CI,
+  retries: 0,
+  timeout: 30_000,
+  use: { baseURL: 'http://127.0.0.1:4173', trace: 'retain-on-failure' },
+  reporter: [['list'], ['html', { open: 'never' }]],
+  webServer: {
+    command: 'npm run serve:production -- --host 127.0.0.1 --port 4173',
+    url: 'http://127.0.0.1:4173',
+    reuseExistingServer: false,
+    timeout: 15_000
+  },
+  // Fill from product requirements; these are examples, not an imposed device policy.
+  projects: [
+    { name: 'phone', use: { viewport: { width: 390, height: 844 } } },
+    { name: 'desktop', use: { viewport: { width: 1280, height: 800 } } }
+  ]
+});

@@ -3,3 +3,6 @@ _site/
 test-results/
 playwright-report/
 evidence/
+
+.artifacts/
+__pycache__/

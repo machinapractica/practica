@@ -80,3 +80,13 @@ Bootstrap validation note (2026-09-11, PR #4): provenance fetches retain history
 Recorded 2026-09-11 from human maintainer. PR: pending domain launch follow-up. The authenticated Pages API supports custom domains and HTTPS for organization repositories. The separate optional Pages domain-claim verification is deferred under this instruction, following the existing Anna’s Dad Press setup; it is not a publishing prerequisite. Configure DNS and HTTPS through existing authorized tools and document actual results.
 
 Publication reference (2026-09-11): the domain-launch continuation above produced https://github.com/machinapractica/practica/pull/5.
+
+---
+
+> OK let's complete as much as possible from SETUP_PROPOSAL.md and OURWAY_PROPOSAL.md without modifying source repositories (that is, create components that are meant to be re-usable, but don't yet put up PRs that morph existing projects to use them; build out the skills that are needed, but don't yet use them to create a new project).
+
+Recorded 2026-09-11 from human maintainer. PRs: pending reusable skills and package implementation. Source repositories are read-only evidence; no consumer migrations or new projects are authorized.
+
+PR reference for the 2026-09-11 reusable-components prompt: https://github.com/machinapractica/practica/pull/6. This PR contains the eight skills, shared resources and validation; it performs no source-repository migration or new-project creation.
+
+Distribution follow-up for PR #6: retain the validated plugin ZIP with CI evidence so the reusable bundle can be downloaded without global installation or generating a project.
