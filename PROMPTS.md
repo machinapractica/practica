@@ -41,6 +41,14 @@ Recorded 2026-09-11 from human maintainer. PR: pending organization creation and
 
 ---
 
+> Read SETUP_MD.md and follow its directions.
+
+> yes
+
+Recorded 2026-09-11 from human maintainer. Repeated verbatim from the bootstrap entries above to associate the same instructions with the separate website PR (pending). The confirmation refers to SETUP_MP.md. This branch prepares the website tracer and its build/evidence/deployment workflow.
+
+---
+
 > ok I logged into npm and created the machinapractica org. npm is logged in. Tell me again why I have to use github's website and waht the minimal steps are
 
 Recorded 2026-09-11 from human maintainer. PR: pending bootstrap publication. Continues the authorized organization, repository, and website bootstrap.
@@ -58,3 +66,9 @@ Recorded 2026-09-11 from human maintainer. PR: pending bootstrap publication. Co
 Recorded 2026-09-11 from human maintainer. PR: pending bootstrap publication. Selects GPLv3 for original repository content.
 
 Publication reference (2026-09-11): the bootstrap prompts recorded above produced https://github.com/machinapractica/practica/pull/3. This resolves their earlier pending PR references without changing historical prompt text.
+
+Publication reference (2026-09-11): the bootstrap and GPLv3 prompts above also produced the separate website PR https://github.com/machinapractica/practica/pull/4.
+
+Bootstrap validation note (2026-09-11, PR #4): the continuation prompt above includes upgrading the pinned Pages artifact action to v4, whose nested upload action is also pinned, to satisfy the verified organization SHA policy.
+
+Bootstrap validation note (2026-09-11, PR #4): provenance fetches retain history instead of truncating main to depth one, so advancing main through a merge does not break ancestry checks or later pushes.

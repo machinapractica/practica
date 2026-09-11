@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} · Machina Practica</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="https://machinapractica.com{{ page.url }}">
+  <meta property="og:title" content="{{ title }} · Machina Practica">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://machinapractica.com{{ page.url }}">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><a class="brand" href="/">Machina Practica<span>Intent. Method. Evidence.</span></a><nav aria-label="Main"><a href="/books/">Books</a><a href="/method/">Method</a><a href="/packages/">Packages</a></nav></header>
+  <main id="main" tabindex="-1">{{ content | safe }}</main>
+  <footer><p>A working body of knowledge. Pre-release. <a href="https://github.com/machinapractica/practica/blob/main/LICENSES.md">GPLv3</a>.</p><p><a href="https://github.com/machinapractica">GitHub organization</a> · <a href="https://github.com/machinapractica/practica/commit/{{ build.revision }}">Source {{ build.short }}</a>{% if build.dirty %} · Local changes{% endif %}</p></footer>
+</body>
+</html>

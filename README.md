@@ -23,3 +23,7 @@ This repository is pre-release. It contains the vision, prompt-provenance enforc
 Use focused PRs with concrete examples and verifiable claims. Keep product intent in the vision and delivery sequencing in planning documents. Record every development prompt verbatim in the same branch. Enable the tracked hooks with `git config core.hooksPath .githooks`.
 
 Original content is licensed under [GPLv3](LICENSE); see [licensing boundaries](LICENSES.md).
+
+## Website tracer
+
+Run `./scripts/verify.sh` with the pinned toolchain. See [website development](docs/WEBSITE.md) for content ownership, local serving, evidence, and deployment boundaries.

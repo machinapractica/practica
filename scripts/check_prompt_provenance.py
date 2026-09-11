@@ -32,7 +32,7 @@ def staged_paths() -> set[str]:
 
 
 def diff_paths(base_ref: str) -> set[str]:
-    git(["fetch", "--no-tags", "--depth=1", "origin", f"{base_ref}:refs/remotes/origin/{base_ref}"])
+    git(["fetch", "--no-tags", "origin", f"{base_ref}:refs/remotes/origin/{base_ref}"])
     return changed_paths_from_names(
         git(["diff", "--name-only", "--diff-filter=ACMRTD", f"origin/{base_ref}...HEAD"])
     )
