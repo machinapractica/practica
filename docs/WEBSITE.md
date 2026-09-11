@@ -1,6 +1,6 @@
 # Website development
 
-The site is pre-release. Production publication, domain verification, and TLS remain bootstrap checks until recorded as verified.
+The content is pre-release. GitHub Pages publishes verified main-branch artifacts to [machinapractica.com](https://machinapractica.com). The custom domain and DNS are configured through the authenticated GitHub and Cloudflare APIs.
 
 ## Verify from a clean checkout
 
@@ -33,3 +33,13 @@ The footer links to the Git source revision. Dirty local builds say “Local cha
 The Website workflow verifies PRs with read-only repository access. Only main can upload a Pages artifact and enter the github-pages deployment environment. Only the deploy job gets pages:write and id-token:write. Actions are pinned to full commit SHAs. Configure Pages for Actions and the environment for main before merging the website PR. Protect main with the actual site-verify and prompt-provenance checks once they exist. PR evidence artifacts are available for review; there is no public PR preview in this first tracer.
 
 References: [Eleventy virtual templates](https://www.11ty.dev/docs/virtual-templates/), [Playwright web server](https://playwright.dev/docs/test-webserver), [GitHub Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+## Domain administration
+
+The repository Pages API supports both `cname` and `https_enforced` for organization-owned repositories. Configure the custom domain before adding DNS, wait for the certificate, then enable HTTPS and verify the apex and www redirect. Use an authenticated administrator locally for settings changes; CI deployment needs only its existing Pages/OIDC permissions.
+
+Cloudflare hosts four GitHub Pages apex A records, four apex AAAA records, and a www CNAME to `machinapractica.github.io`, all with proxying disabled. Preserve unrelated records.
+
+GitHub's optional account/organization Pages domain-claim verification is separate from configuring the site's domain and issuing its HTTPS certificate. It remains deferred under the owner's instruction to minimize manual setup, matching the Anna’s Dad Press deployment. If that extra verification is added later, use the Pages challenge provided by GitHub; general organization badge verification is a different feature.
+
+The organization has one owner and no ordinary members. Requiring organization-wide 2FA and restricting future members' deletion/transfer, visibility changes, and outside invitations are separate website-only security controls, not deployment prerequisites. Those settings remain deferred; repository protections and secret protection are already active.

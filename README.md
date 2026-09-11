@@ -1,6 +1,6 @@
 # Practica · Machina Practica
 
-Practica is the flagship publishing and project-method repository of **Machina Practica**, an ecosystem for disciplined, repeatable agent-assisted software development. Its canonical website is [machinapractica.com](https://machinapractica.com); website deployment is part of the bootstrap and is not yet verified.
+Practica is the flagship publishing and project-method repository of **Machina Practica**, an ecosystem for disciplined, repeatable agent-assisted software development. Its canonical website is [machinapractica.com](https://machinapractica.com).
 
 Two connected books express the same thesis:
 
