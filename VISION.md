@@ -79,14 +79,6 @@ Practica should eventually produce:
 
 The repo should make it easy to read the books and to extract useful instructions into another project.
 
-## Initial Roadmap
-
-1. Establish the project vision and repository conventions.
-2. Draft outlines for both books.
-3. Write the first practical chapters for task framing, verification, and review.
-4. Create the first reusable Machina Practica rule set for new software projects.
-5. Test the rules against real agent-assisted changes and revise them based on observed imprecision, ambiguity, and failure.
-
 ## Definition of Success
 
 Practica succeeds if it helps programmers get more reliable work from agents while continually raising the quality bar for software projects.

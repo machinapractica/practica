@@ -25,3 +25,16 @@ Recorded 2026-06-26 from human maintainer. Produced PR #2: https://github.com/an
 > PROMPTS.md markdown is a bit too heavyweight on structure/section headings/boilerplate, with the verbatim prompt itself in a hard to read single-line pre block. Reconsider the formatting to make it easier to read and focus on teh prompt itself rather than metadata. This PR lacks enforcement of its rules, which should be done in a precommit hook, a push hook, and CI workflows.
 
 Recorded 2026-06-26 from human maintainer. Produced PR #2: https://github.com/anicolao/practica/pull/2
+
+
+---
+
+> Read SETUP_MD.md and follow its directions.
+
+Recorded 2026-09-11 from human maintainer. PR: pending organization creation and transfer. The named file was absent; the agent read SETUP_MP.md and asked whether that was the intended execution brief.
+
+---
+
+> yes
+
+Recorded 2026-09-11 from human maintainer. PR: pending organization creation and transfer. Confirms SETUP_MP.md as the execution brief. SETUP_MP.md, SETUP_PROPOSAL.md, and OURWAY_PROPOSAL.md are imported planning artifacts; this agent did not author their research or original text.
