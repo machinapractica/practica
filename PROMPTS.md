@@ -68,3 +68,5 @@ Recorded 2026-09-11 from human maintainer. PR: pending bootstrap publication. Se
 Publication reference (2026-09-11): the bootstrap prompts recorded above produced https://github.com/machinapractica/practica/pull/3. This resolves their earlier pending PR references without changing historical prompt text.
 
 Publication reference (2026-09-11): the bootstrap and GPLv3 prompts above also produced the separate website PR https://github.com/machinapractica/practica/pull/4.
+
+Bootstrap validation note (2026-09-11, PR #4): the continuation prompt above includes upgrading the pinned Pages artifact action to v4, whose nested upload action is also pinned, to satisfy the verified organization SHA policy.
