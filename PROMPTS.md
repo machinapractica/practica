@@ -72,3 +72,11 @@ Publication reference (2026-09-11): the bootstrap and GPLv3 prompts above also p
 Bootstrap validation note (2026-09-11, PR #4): the continuation prompt above includes upgrading the pinned Pages artifact action to v4, whose nested upload action is also pinned, to satisfy the verified organization SHA policy.
 
 Bootstrap validation note (2026-09-11, PR #4): provenance fetches retain history instead of truncating main to depth one, so advancing main through a merge does not break ancestry checks or later pushes.
+
+---
+
+> I haven't had to do this manual work in the past. In ../annasdadpress teh agent was ablet o configur the settings for pages ... is this because we're working in an org? Minimize my manual work
+
+Recorded 2026-09-11 from human maintainer. PR: pending domain launch follow-up. The authenticated Pages API supports custom domains and HTTPS for organization repositories. The separate optional Pages domain-claim verification is deferred under this instruction, following the existing Anna’s Dad Press setup; it is not a publishing prerequisite. Configure DNS and HTTPS through existing authorized tools and document actual results.
+
+Publication reference (2026-09-11): the domain-launch continuation above produced https://github.com/machinapractica/practica/pull/5.
