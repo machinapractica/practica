@@ -12,4 +12,4 @@ A shared package should remove duplication and maintenance while preserving prod
 
 **Status: pre-extraction. No packages are available from this project.** The first step is a source inventory, not a placeholder publication.
 
-Read the [package extraction proposal](https://github.com/machinapractica/packages/blob/main/docs/proposals/PACKAGE_EXTRACTION_PROPOSAL.md) in the [package repository](https://github.com/machinapractica/packages). These are the intended canonical destinations being established during the bootstrap.
+Read the [package extraction proposal](https://github.com/machinapractica/packages/blob/main/docs/proposals/PACKAGE_EXTRACTION_PROPOSAL.md) in the [package repository](https://github.com/machinapractica/packages). The `@machinapractica` npm scope is reserved; releases will begin with a real experimental package after source inventory.

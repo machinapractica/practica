@@ -46,3 +46,23 @@ Recorded 2026-09-11 from human maintainer. PR: pending organization creation and
 > yes
 
 Recorded 2026-09-11 from human maintainer. Repeated verbatim from the bootstrap entries above to associate the same instructions with the separate website PR (pending). The confirmation refers to SETUP_MP.md. This branch prepares the website tracer and its build/evidence/deployment workflow.
+
+---
+
+> ok I logged into npm and created the machinapractica org. npm is logged in. Tell me again why I have to use github's website and waht the minimal steps are
+
+Recorded 2026-09-11 from human maintainer. PR: pending bootstrap publication. Continues the authorized organization, repository, and website bootstrap.
+
+---
+
+> ok I have done it. let's complete setup
+
+Recorded 2026-09-11 from human maintainer. PR: pending bootstrap publication. Continues the authorized organization, repository, and website bootstrap.
+
+---
+
+> GPLv3
+
+Recorded 2026-09-11 from human maintainer. PR: pending bootstrap publication. Selects GPLv3 for original repository content.
+
+Publication reference (2026-09-11): the bootstrap prompts recorded above produced https://github.com/machinapractica/practica/pull/3. This resolves their earlier pending PR references without changing historical prompt text.

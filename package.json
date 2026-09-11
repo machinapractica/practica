@@ -2,7 +2,10 @@
   "name": "machina-practica-site",
   "private": true,
   "type": "module",
-  "engines": { "node": "24.18.1", "npm": "11.16.0" },
+  "engines": {
+    "node": "24.18.1",
+    "npm": "11.16.0"
+  },
   "packageManager": "npm@11.16.0",
   "scripts": {
     "build": "eleventy",
@@ -13,5 +16,6 @@
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
     "@playwright/test": "1.63.0"
-  }
+  },
+  "license": "GPL-3.0-only"
 }
