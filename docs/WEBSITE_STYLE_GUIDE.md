@@ -70,7 +70,7 @@ Weak: “Provide sufficient context.”
 
 Useful: “For an export feature, say which records belong in the file, who can export them, and what should happen when there are no records.”
 
-For the books, derive the method from the repositories supplying our components. Inspect their documents, code and history, retain exact source references, and use their actual examples. Do not invent a generic prompting process or fictional project as the basis of a chapter. Distinguish repeated practice from our proposed organization of it, and record source deviations from the reliability standard.
+For the books, derive the method from the repositories supplying our components. Inspect their documents, code and history, retain exact source references, and use their actual examples. Write a hands-on guide from that research: tell the reader what to do, what to ask the agent, and what to try next. Keep project comparisons, historical explanations and source mappings in editorial notes, outside the main lesson. Do not invent a generic prompting process or fictional project as the basis of a chapter. Distinguish repeated practice from our proposed organization of it, and record source deviations from the reliability standard.
 
 ## State the reliability expectations clearly
 

@@ -12,7 +12,7 @@ Two books explain the system: *Effective Agents* teaches you to direct coding ag
 
 **The programmer's guide to building reliable software with agents.**
 
-The book starts with describing the product and establishing a working application and test environment. It follows practices repeated in the projects behind our reusable components: product and domain documents, complete implementation slices, and checks through the real application. Examples come from those repositories.
+Start by building a multiplayer game. Follow the prompts, review the design, publish a tested coming-soon page, and add player journeys you can try with a friend. Each step tells you what to ask the agent and how to check the result.
 
 The book teaches you to:
 
@@ -22,7 +22,7 @@ The book teaches you to:
 - Build with tested components and repeatable checks.
 - Investigate failures and accept work against the result you asked for.
 
-Start with the [draft table of contents](https://github.com/machinapractica/practica/blob/main/books/effective-agents/README.md) or [Chapter 1: Describe the product](https://github.com/machinapractica/practica/blob/main/books/effective-agents/01-describe-the-product.md). Both are drafts for review. The [source notes](https://github.com/machinapractica/practica/blob/main/books/effective-agents/SOURCE_NOTES.md) trace the draft to the inspected projects.
+Start with the [draft table of contents](https://github.com/machinapractica/practica/blob/main/books/effective-agents/README.md) or [Chapter 1: Build a game: Deep Sea](https://github.com/machinapractica/practica/blob/main/books/effective-agents/01-build-deep-sea.md). Both are drafts for review. The opening exercise follows the recorded build through a working multiplayer lobby; its remaining gameplay steps still need to be tried through to completion.
 
 <h2 id="machina-practica">Machina Practica</h2>
 
