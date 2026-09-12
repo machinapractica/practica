@@ -146,3 +146,14 @@ Welcome to the future of software development.
 ```
 
 PR linkage for “Refine the website voice from an edited example — 2026-09-12”: https://github.com/machinapractica/practica/pull/9.
+
+## Clarify the books and draft Effective Agents — 2026-09-12
+
+Actor: user
+PR: pending
+
+```text
+This is looking better and better. The "programmer's guide" is literally the book "Effective Agents", and this is a little unclear/buried in the current format. "Machina Practica" is a walkthrough of the skills that focuses on what their goals are intended to make it possible both to understand the skills and improve/update/maintain them ... I feel this book is a little less well defined. These books will be written in markdown to make them easy for agents to read but we'll want to format them with typst to create professional print copies at some point. Let's try making the website a little clearer about the books and then draft a bit of "Effective Agents" for review, perhaps the table of contents and first chapter.
+```
+
+PR linkage for “Clarify the books and draft Effective Agents — 2026-09-12”: https://github.com/machinapractica/practica/pull/10.

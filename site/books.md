@@ -1,34 +1,43 @@
 ---
 layout: base.njk
-title: The programmer's guide
-description: Learn to direct coding agents effectively, define successful results, and verify the software they deliver.
+title: The books
+description: Effective Agents is the programmer's guide. Machina Practica walks through the goals and design of the agent skills.
 permalink: /books/
 ---
-# The programmer's guide
+# The books
 
-You'll learn to direct coding agents effectively, from defining a task to accepting the finished software. The guide teaches the decisions, instructions and checks that produce reliable results.
-
-For an export feature, define which data belongs in the file, who can export it, and what happens when there are no records. Give the agent those decisions, then verify the exported file through the application. The same approach applies across projects and problem domains.
-
-## What you'll learn
-
-- Describe the result you want and what belongs outside the task.
-- Give the agent the rules and source material it needs.
-- Set limits on what it can change without asking you.
-- Break work into small changes you can try and review.
-- Check that tests exercise the promised behavior.
-- Investigate failures without lowering the test's standards to get a pass.
-
-The agent's skills follow the same method. You and the agent work to a shared definition of a successful result.
+Two books explain the system: *Effective Agents* teaches you to direct coding agents. *Machina Practica* explains the skills so you can understand and maintain them.
 
 <h2 id="effective-agents">Effective Agents</h2>
 
-The programmer's book teaches the method through worked examples: setting up a project, making a change, investigating a failure, and reviewing the result.
+**The programmer's guide to building reliable software with agents.**
+
+You'll learn to define the result, give the agent useful instructions, and check the software it delivers. Worked examples take you through setting up a project, making a change, investigating a failure, and reviewing the result.
+
+The book teaches you to:
+
+- Describe what the software should do and set the scope of the work.
+- Give the agent the rules and source material it needs.
+- Delegate work in useful pieces, with clear authority to carry it through.
+- Build with tested components and repeatable checks.
+- Investigate failures and accept work against the result you asked for.
+
+Start with the [draft table of contents](https://github.com/machinapractica/practica/blob/main/books/effective-agents/README.md) or [Chapter 1: Direct the work](https://github.com/machinapractica/practica/blob/main/books/effective-agents/01-direct-the-work.md). Both are drafts for review.
 
 <h2 id="machina-practica">Machina Practica</h2>
 
-The companion manual explains the rules behind the skills and how to apply them in a repository. It is written for agents and the programmers maintaining their instructions. The project and this companion manual share a name.
+**A walkthrough of the agent skills, their goals and their design.**
+
+For each skill, the book explains what it helps the agent accomplish, why its instructions take their present form, and how to tell whether they work. That understanding lets you improve, update and maintain the skills as the tools and projects change.
+
+The book is for people and agents working on the skills. Its scope is still taking shape; the starting point is to connect each skill's goals to its instructions, worked examples and checks. This book shares its name with the overall system.
+
+## Markdown and print editions
+
+Both books will be written in Markdown, so people and agents can read and work with the same source. We plan to use Typst to produce professionally typeset print editions from that source. The print workflow is not built yet.
 
 ## What's available
 
-Neither book manuscript is available yet. You can read [how the method works](/method/) and [the goals behind it](/vision/), and inspect the [experimental skills](https://github.com/machinapractica/practica/blob/main/docs/SKILLS.md).
+*Effective Agents* has a draft table of contents and first chapter. The remaining chapters and the *Machina Practica* manuscript are still to be written.
+
+You can also read [how the method works](/method/) and [the goals behind it](/vision/), and inspect the [experimental skills](https://github.com/machinapractica/practica/blob/main/docs/SKILLS.md).

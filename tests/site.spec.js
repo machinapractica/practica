@@ -33,10 +33,12 @@ test('read the landing page and follow the books, method, and proposals', async 
     await expect(page.locator('footer a').filter({ hasText: 'Source' })).toHaveAttribute('href', 'https://github.com/machinapractica/practica/commit/' + revision);
     await record('01-home');
   });
-  await test.step('Read the human guide and the project goals', async () => {
-    await page.getByRole('navigation').getByRole('link', { name: "Programmer's guide", exact: true }).click();
-    await expect(page.getByRole('heading', { name: "The programmer's guide" })).toBeVisible();
+  await test.step('Read the books and the project goals', async () => {
+    await page.getByRole('navigation').getByRole('link', { name: "Books", exact: true }).click();
+    await expect(page.getByRole('heading', { name: "The books" })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Effective Agents', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Chapter 1: Direct the work', exact: true })).toHaveAttribute('href', 'https://github.com/machinapractica/practica/blob/main/books/effective-agents/01-direct-the-work.md');
+    await expect(page.getByRole('heading', { name: 'Markdown and print editions', exact: true })).toBeVisible();
     await record('02-human-guide');
     await page.getByRole('main').getByRole('link', { name: 'the goals behind it', exact: true }).click();
     await expect(page.getByRole('heading', { name: "What we're trying to build", exact: true })).toBeVisible();
