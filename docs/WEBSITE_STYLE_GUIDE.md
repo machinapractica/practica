@@ -70,7 +70,7 @@ Weak: “Provide sufficient context.”
 
 Useful: “For an export feature, say which records belong in the file, who can export them, and what should happen when there are no records.”
 
-Use one running example where it helps. Don't imply that an illustrative example is a shipped feature or a completed project.
+For the books, derive the method from the repositories supplying our components. Inspect their documents, code and history, retain exact source references, and use their actual examples. Do not invent a generic prompting process or fictional project as the basis of a chapter. Distinguish repeated practice from our proposed organization of it, and record source deviations from the reliability standard.
 
 ## State the reliability expectations clearly
 

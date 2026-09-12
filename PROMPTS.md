@@ -157,3 +157,14 @@ This is looking better and better. The "programmer's guide" is literally the boo
 ```
 
 PR linkage for “Clarify the books and draft Effective Agents — 2026-09-12”: https://github.com/machinapractica/practica/pull/10.
+
+## Ground the book in the source projects — 2026-09-12
+
+Actor: user
+PR: pending
+
+```text
+this direct the work chapter is certified bullshit. we are supposed to be buildign on teh pattenrs we're extracting from the example projects, not making up a process out of thin air. Remove teh entire part from the book and begin with what is now part II. make sure to ground the draft in process that you've seen repeated across all the repositories that we're extracting components from.
+```
+
+PR linkage for “Ground the book in the source projects — 2026-09-12”: https://github.com/machinapractica/practica/pull/11.
