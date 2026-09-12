@@ -1,15 +1,18 @@
 # Practica · Machina Practica
 
-Practica is the flagship publishing and project-method repository of **Machina Practica**, an ecosystem for disciplined, repeatable agent-assisted software development. Its canonical website is [machinapractica.com](https://machinapractica.com).
+Machina Practica is a method for humans and coding agents to build reliable software together. This repository holds the website, planned books, and agent skills.
 
-Two connected books express the same thesis:
+The three parts fit together:
 
-- **Effective Agents** helps human programmers frame, supervise, review, and integrate agent work to produce software that matches their intent.
-- **Machina Practica** gives agents and maintainers operational rules, skills, and repository conventions for exact, reliable work.
+- The human guide teaches you how to describe a job, direct the agent, and check its work.
+- The skills give the agent instructions that match the method you've learned.
+- The [`@machinapractica/*` packages](https://github.com/machinapractica/packages) give it tested software components to reuse.
 
-[Eight experimental skills](docs/SKILLS.md) turn that method into phase-scoped workflows. Independently released [`@machinapractica/*` packages](https://github.com/machinapractica/packages) will contain field-tested implementation mechanics. They have separate compatibility and release responsibilities.
+The goal is to build reliable software faster, with less repeated explanation and repair. We expect race conditions to be avoided by design, CI to be repeatable, and screenshots to be deterministic in their declared environment. Each part still has to demonstrate that it meets those expectations.
 
-This repository is pre-release. It contains the vision, prompt-provenance enforcement, and imported proposals. An experimental skill plugin is available in source and can be packaged locally. Book manuscripts are not yet available. The package proposal is not a package catalog.
+[Eight experimental skills](docs/SKILLS.md) and two alpha packages are available. The planned books, *Effective Agents* for humans and *Machina Practica* for agents, don't yet have published manuscripts. The skills haven't been used to create a project, and the packages have no consumer adopters yet.
+
+Read [how it works](https://machinapractica.com/method/) on the website. Use the [website style guide](docs/WEBSITE_STYLE_GUIDE.md) when editing public copy.
 
 ## Read and contribute
 

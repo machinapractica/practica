@@ -1,6 +1,6 @@
 # Website development
 
-The content is pre-release. GitHub Pages publishes verified main-branch artifacts to [machinapractica.com](https://machinapractica.com). The custom domain and DNS are configured through the authenticated GitHub and Cloudflare APIs.
+The books are being written; the skills and packages are experimental. Follow the [website style guide](WEBSITE_STYLE_GUIDE.md) when editing public copy. GitHub Pages publishes verified main-branch artifacts to [machinapractica.com](https://machinapractica.com). The custom domain and DNS are configured through the authenticated GitHub and Cloudflare APIs.
 
 ## Verify from a clean checkout
 
@@ -18,11 +18,11 @@ It installs exact locked dependencies and Chromium, builds the production artifa
 
 Eleventy 3.1.6 generates static HTML without client-side JavaScript. It supports Markdown and a shared layout without a client framework. The cost is a Node development dependency tree and an explicit configuration for publishing selected repository content. Node, npm, Eleventy, Playwright, and action revisions are pinned; package-lock.json fixes transitive dependencies.
 
-The vision and setup proposal are rendered from their repository sources through virtual templates, without copying their content into site/. Future book manuscripts can use the same mechanism. Package research stays in its separate repository and is linked, not duplicated. Do not create install instructions before skills/packages exist.
+The vision is rendered from VISION.md through a virtual template. The public setup page in site/project-setup.md explains the sequence in plain language and links to the original proposal, which remains intact. Future book manuscripts can use the same mechanism. Package research stays in its separate repository and is linked, not duplicated. Do not create install instructions before skills/packages exist.
 
 ## Evidence
 
-Playwright opens the ordinary home page at 1440×1000 and 390×844, asserts current status and exact source revision, captures the home page, follows books → vision and method → proposal, captures the proposal, and reads package status. Each run attaches its walkthrough and screenshots under test-results/. The HTML report is in playwright-report/; stage logs are in evidence/. CI retains these as revision-named review artifacts, including traces and failure screenshots when a test fails.
+Playwright opens the ordinary home page at 1440×1000 and 390×844, asserts current status and exact source revision, captures the home page, follows the human guide → goals and method → setup sequence, captures the rewritten pages, and reads package status. Each run attaches its walkthrough and screenshots under test-results/. The HTML report is in playwright-report/; stage logs are in evidence/. CI retains these as revision-named review artifacts, including traces and failure screenshots when a test fails.
 
 The suite also visits every generated HTML page, checks metadata, local links and fragment destinations, asserts responsive document width, and exercises missing-page recovery and keyboard skip navigation. Screenshot capture follows visible semantic assertions. Screenshots are review evidence, not automatically approved pixel baselines. No simulator or Chromium emulation proves physical-device, Safari, Firefox, screen-reader, DNS, TLS, or production behavior.
 

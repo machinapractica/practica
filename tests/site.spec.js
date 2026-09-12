@@ -22,34 +22,48 @@ test('read the landing page and follow the books, method, and proposals', async 
   }
   await test.step('Open the ordinary home page and verify truthful status', async () => {
     await page.goto('/');
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Make intentexecutable.');
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Build software with agents');
+    await expect(page.locator('#parts + ol > li')).toHaveCount(3);
+    for (const role of ['A guide for you.', 'Skills for the agent.', 'Packages for the software.']) {
+      await expect(page.locator('#parts + ol')).toContainText(role);
+    }
+    await expect(page.locator('#expectations + p + ul')).toContainText('Expect zero pixel differences');
     await expect(page.getByText('Eight experimental skills are available in source.', { exact: false })).toBeVisible();
     await expect(page.locator('footer a').filter({ hasText: 'Source' })).toHaveAttribute('href', 'https://github.com/machinapractica/practica/commit/' + revision);
     await record('01-home');
   });
-  await test.step('Read the books and follow the shared vision', async () => {
-    await page.getByRole('navigation').getByRole('link', { name: 'Books', exact: true }).click();
-    await expect(page.getByRole('heading', { name: 'Two connected books' })).toBeVisible();
+  await test.step('Read the human guide and the project goals', async () => {
+    await page.getByRole('navigation').getByRole('link', { name: 'Human guide', exact: true }).click();
+    await expect(page.getByRole('heading', { name: 'The human guide' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Effective Agents', exact: true })).toBeVisible();
-    await page.getByRole('main').getByRole('link', { name: 'vision', exact: true }).click();
-    await expect(page.getByRole('heading', { name: 'Vision', exact: true })).toBeVisible();
+    await record('02-human-guide');
+    await page.getByRole('main').getByRole('link', { name: 'the goals behind it', exact: true }).click();
+    await expect(page.getByRole('heading', { name: "What we're trying to build", exact: true })).toBeVisible();
+    await record('03-goals');
   });
-  await test.step('Follow the method to its proposed workflow', async () => {
-    await page.getByRole('navigation').getByRole('link', { name: 'Method', exact: true }).click();
-    await expect(page.getByText('Status: experimental skills available in source.', { exact: false })).toBeVisible();
-    await page.getByRole('link', { name: 'project setup proposal', exact: true }).click();
-    await expect(page.getByRole('heading', { level: 1 })).toContainText('Staged software-project setup');
-    await expect(page.getByText('Status: research proposal', { exact: false })).toBeVisible();
-    await record('02-proposal');
+  await test.step('Read the agent instructions and follow the setup sequence', async () => {
+    await page.getByRole('navigation').getByRole('link', { name: 'Method & skills', exact: true }).click();
+    await expect(page.getByRole('heading', { name: 'What a skill does' })).toBeVisible();
+    await expect(page.getByText('The current skill bundle is packaged for Codex.', { exact: false })).toBeVisible();
+    await record('04-method');
+    await page.getByRole('link', { name: 'setting up a project', exact: true }).click();
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Setting up a project');
+    await expect(page.getByRole('heading', { name: '3. Prove the blank application works' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'project setup proposal', exact: true })).toHaveAttribute('href', 'https://github.com/machinapractica/practica/blob/main/docs/proposals/PROJECT_SETUP_PROPOSAL.md');
+    await record('05-setup');
   });
   await test.step('Read the package status', async () => {
     await page.getByRole('navigation').getByRole('link', { name: 'Packages', exact: true }).click();
-    await expect(page.getByText('Status: experimental alpha releases on npm.', { exact: false })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Reusable software packages', exact: true })).toBeVisible();
+    await expect(page.getByText('Two experimental packages are published at', { exact: false })).toBeVisible();
+    await expect(page.locator('pre')).toContainText('@machinapractica/testing@0.1.0-alpha.0');
+    await expect(page.locator('pre')).toContainText('@machinapractica/build-info@0.1.0-alpha.0');
     await expect(page.getByRole('link', { name: 'package extraction proposal' })).toHaveAttribute('href', 'https://github.com/machinapractica/packages/blob/main/docs/proposals/PACKAGE_EXTRACTION_PROPOSAL.md');
+    await record('06-packages');
   });
   expect(failures).toEqual([]);
   expect(await context.cookies()).toEqual([]);
-  await info.attach('walkthrough.md', { body: Buffer.from('# Website tracer\n\nRevision: ' + revision + '\nViewport: ' + info.project.name + '\n\nOpened home; asserted prerelease status and source revision; followed books → vision and method → proposal; checked package status. Screenshots follow semantic assertions.\n\n' + steps.join('\n')), contentType: 'text/markdown' });
+  await info.attach('walkthrough.md', { body: Buffer.from('# Website tracer\n\nRevision: ' + revision + '\nViewport: ' + info.project.name + '\n\nOpened home; checked the three parts, reliability expectations, availability and source revision; followed the human guide → goals and method → setup sequence; checked alpha package instructions. Screenshots follow semantic assertions.\n\n' + steps.join('\n')), contentType: 'text/markdown' });
 });
 
 test('every production page has metadata, valid local links, and responsive width', async ({ page, request }) => {
