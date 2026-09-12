@@ -13,7 +13,7 @@ Recorded 2026-09-11. The approved scope is reusable components and skills, with 
 | Distribution | Portable and Codex-compatible plugin metadata, GPLv3 bundle, reproducible ZIP | Marketplace distribution and consumer installation |
 | Verification | Six structural/bundle tests; official skill/plugin validation; three-shape evaluation specification | Specification is not a passing model evaluation |
 
-The [package repository](https://github.com/machinapractica/packages) now contains source inventory, retained licensed reference modules and the experimental testing/build-info implementations. Neither package has an adopter or registry release yet. Their package verifier runs unit, CLI, browser and packed-install contracts.
+The [package repository](https://github.com/machinapractica/packages) now contains source inventory, retained licensed reference modules and the experimental testing/build-info implementations. Both packages have initial `0.1.0-alpha.0` registry releases and configured GitHub trusted publishers; neither has a consumer adopter yet. Their package verifier runs unit, CLI, browser and packed-install contracts.
 
 Later event/transport/room/tabletop packages remain behind the proposal's historical compatibility and lower-layer adoption gates. PWA/Pages extraction awaits stable build identity and retained offline/deployment fixtures. No empty packages, fabricated histories or demo adoption counts were introduced to bypass those gates.
 
