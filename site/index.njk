@@ -1,16 +1,34 @@
 ---
 layout: base.njk
-title: Exact intent. Reliable software.
-description: Books, a project-development method, and proposed reusable mechanics for disciplined agent-assisted software development.
+title: Build software with agents
+description: A development method with a guide for humans, skills for coding agents, and reusable software packages. Learn how the three parts work together.
 ---
 <section class="hero">
-<p class="eyebrow">An engineering practice, in progress</p>
-<h1>Make intent<br>executable.</h1>
-<p class="lede">Better software begins with precise intent. Machina Practica connects the human judgment, agent workflows, and evidence that carry it into working systems.</p>
-<a class="button" href="/vision/">Read the vision <span aria-hidden="true">↗</span></a>
+<h1>Build software with agents</h1>
+<p class="lede">Machina Practica is a method for humans and coding agents to build reliable software together. We're putting it into a human guide, instructions the agent can follow, and software packages it can reuse.</p>
+<p>You learn how to direct the work. The agent gets instructions that match your way of working. It uses tested components for the parts that don't need inventing again. The goal is to get reliable software built faster, with less repeated explanation and repair.</p>
+<a class="button" href="/method/">Read the method <span aria-hidden="true">↗</span></a>
 </section>
-<section aria-labelledby="two-books"><div class="section-label">01 / The books</div><h2 id="two-books">One thesis. Two readers.</h2>
-<div class="books"><article><p class="eyebrow">For human programmers</p><h3>Effective Agents</h3><p>Frame the task. Direct the work. Review the evidence. A guide to using coding agents with clear engineering judgment.</p><a href="/books/#effective-agents">About the book</a></article><article><p class="eyebrow">For agents and their maintainers</p><h3>Machina Practica</h3><p>Put instructions, boundaries, and verification close to the code. A practical method for repeatable, dependable agent work.</p><a href="/books/#machina-practica">About the method book</a></article></div>
+<section aria-labelledby="parts">
+<h2 id="parts">Three parts that work together</h2>
+<ol>
+<li><strong>A guide for you.</strong> Learn how to describe the job, decide what the agent can do, and check the result. You stay responsible for what gets built. <a href="/books/">About the human guide</a>.</li>
+<li><strong>Skills for the agent.</strong> Give it reusable instructions for each kind of task: understand the problem, set up the project, plan a change, build it, and check it. These instructions follow the same method you learn. <a href="/method/#skills">How the skills work</a>.</li>
+<li><strong>Packages for the software.</strong> Let the agent reuse tested code for jobs such as recording test results and identifying a build. It can spend more time on your product and less time rewriting the test tools. <a href="/packages/">Available packages</a>.</li>
+</ol>
 </section>
-<section aria-labelledby="practice"><div class="section-label">02 / The practice</div><h2 id="practice">From principles to working habits.</h2><div class="books"><article><h3>Focused skills</h3><p>Experimental skills guide one phase at a time: intent, domain, scaffold, design, planning, and delivery.</p><a href="/method/">Explore the method</a></article><article><h3>Proven mechanics</h3><p>Future @machinapractica packages will extract field-tested implementation mechanics after their shared boundaries have been verified.</p><a href="/packages/">Read the package direction</a></article></div></section>
-<aside class="status"><strong>Early work, stated plainly.</strong> Eight experimental skills are available in source. Book manuscripts are not yet available. Two experimental alpha packages are published on npm. Start with the vision and research proposals; follow the source as the work develops.</aside>
+<section aria-labelledby="expectations">
+<h2 id="expectations">Set a higher bar for the software</h2>
+<p>Agents encounter plenty of code that races, tests that fail at random, and screenshot checks that hide differences. Seeing those patterns often doesn't make them acceptable.</p>
+<ul>
+<li><strong>Design away races.</strong> Make the order of state changes explicit and wait for the state you need.</li>
+<li><strong>Make CI 100% repeatable.</strong> Fix the environment and inputs so the same change produces the same build and test results.</li>
+<li><strong>Make screenshots deterministic.</strong> Control the clock, data, fonts and rendering environment. Expect zero pixel differences in that environment. Fix unexplained differences instead of hiding them with masks or fuzzy comparisons.</li>
+</ul>
+<p>These are requirements for the method and its components. We still have to demonstrate that each component meets them. A flaky test needs a fix; rerunning it until it's green doesn't establish that the software works.</p>
+</section>
+<section aria-labelledby="today">
+<h2 id="today">What you can use today</h2>
+<p>Eight experimental skills are available in source. Two packages are published as alpha releases. The human guide is still being written; there are no book manuscripts to read yet.</p>
+<p>The skills haven't yet been used to create a project, and the packages have no consumer adopters yet. The whole method still needs to be tested together in real projects. Start with <a href="/method/">how the method works</a>, or read <a href="/vision/">what we're trying to achieve</a>.</p>
+</section>

@@ -8,10 +8,7 @@ export default function (config) {
   config.addGlobalData('build', { revision, dirty, short: revision.slice(0, 7) });
   config.addPassthroughCopy('site/assets');
   config.addTemplate('vision.md', readFileSync('VISION.md', 'utf8'), {
-    layout: 'base.njk', title: 'The vision', description: 'The thesis and principles behind Machina Practica.', permalink: '/vision/'
-  });
-  config.addTemplate('project-setup.md', readFileSync('docs/proposals/PROJECT_SETUP_PROPOSAL.md', 'utf8'), {
-    layout: 'base.njk', title: 'Project setup proposal', description: 'A research proposal for staged software development with focused agent skills.', permalink: '/proposals/project-setup/'
+    layout: 'base.njk', title: 'What we’re trying to build', description: 'A shared method for humans and coding agents, with instructions and components built for repeatable, reliable software.', permalink: '/vision/'
   });
   return { dir: { input: 'site', output: '_site' }, markdownTemplateEngine: false, htmlTemplateEngine: 'njk' };
 }

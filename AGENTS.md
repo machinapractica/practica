@@ -41,3 +41,7 @@ Treat prompt provenance as part of the project source. A PR that changes project
 The repository enforces this expectation in local Git hooks and CI. If the checks fail, add the missing prompt entry rather than bypassing the check.
 
 In a local checkout, run `git config core.hooksPath .githooks` before committing so Git uses the tracked pre-commit and pre-push hooks.
+
+## Website copy
+
+Before changing public copy, read [the website style guide](docs/WEBSITE_STYLE_GUIDE.md). It covers rendered repository documents as well as site pages, navigation and metadata. Explain the human guide, agent skills and software packages in plain language. Preserve the distinction between reliability requirements and demonstrated results. Review the rendered copy on phone and desktop; automated checks cannot judge the voice.

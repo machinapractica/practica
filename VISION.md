@@ -1,86 +1,47 @@
-# Vision
+# What we're trying to build
 
-Practica exists to make agent-assisted software development more disciplined, repeatable, and exact.
+Machina Practica is a method for developing software with coding agents. We want humans and agents to work from the same instructions and expectations, and to reuse components that have been tested properly. The result should be reliable software built faster, with less repeated work.
 
-Agents can already write code, run tools, search repositories, and produce credible explanations. That is not enough. Production software depends on judgment: choosing the right scope, preserving invariants, writing tests that matter, noticing architectural pressure, communicating uncertainty, and leaving the project more correct than it was found. Practica is about the human and machine practices that make those outcomes more likely.
+## How the pieces fit
 
-The ambition is to help teams build perfect systems: systems that do exactly what the engineering team intends them to do, with no tolerance for avoidable imprecision or failure. "Perfect" does not mean effortless, overdesigned, or frozen. It means the implementation, tests, documentation, and operating behavior converge on the team's actual intent.
+The project has three parts:
 
-## Thesis
+- **A manual for humans.** Learn how to define a job, give an agent the right information, decide what it can do, and check its work.
+- **Skills and instructions for agents.** Give the agent a repeatable way to do the work the manual teaches you to ask for.
+- **Software packages.** Give the agent tested components for common jobs, so each project doesn't have to invent them again.
 
-The central thesis is simple:
+You learn how to use the method. The agent knows which method you're using. The shared components support the behavior you both expect.
 
-> Agents become dramatically more effective when humans learn to manage them as engineering collaborators and when projects are prepared with instructions, workflows, and verification loops that make exact behavior easier to achieve.
+The planned human book is called *Effective Agents*. Its companion manual for agents is called *Machina Practica*. The instructions and packages should also be useful on their own, without requiring someone to read two books before making a change.
 
-This project publishes that thesis in two forms:
+## Who this is for
 
-- **Effective Agents** teaches human programmers how to work with agents.
-- **Machina Practica** gives agents and projects the rules, skills, and scaffolding needed to work well.
+This is for programmers who use coding agents and want to trust the resulting software. It's also for people maintaining the instructions and tools those agents use.
 
-One book faces the human. The other faces the machine. Together, they define a practical operating system for agent-assisted programming.
+You remain responsible for deciding what to build and accepting the result. The agent should make more of the work practical to delegate, while making its changes easier to inspect and test.
 
-## Audience
+## The standards we want
 
-### Human programmers
+Common faults in existing software shouldn't become assumptions in our method. An agent may have seen plenty of flaky tests or advice to hide screenshot differences. We want its instructions and components to teach different expectations.
 
-Practica is for programmers who care about production quality and want agents to increase leverage while simultaneously raising standards. It is especially for engineers who have seen agents produce impressive demos but inconsistent project outcomes.
+**Avoid races by design.** Make the order of state changes clear. A correct result should follow from that design, without depending on lucky timing.
 
-The human-facing material should help readers:
+**Make CI 100% repeatable in its declared environment.** The same source and controlled inputs should produce the same build and test results. A failure that disappears on a retry still needs an explanation and a fix.
 
-- Frame tasks so agents can make real progress.
-- Decide what to delegate and what to keep under direct human control.
-- Review agent work with appropriate skepticism.
-- Build repeatable workflows for implementation, debugging, refactoring, and documentation.
-- Improve their own engineering clarity by making tacit expectations explicit and verifiable.
+**Make screenshots fully deterministic in the chosen rendering environment.** Fix the data, clock, fonts, animations and other inputs that affect the image. Expect zero pixel differences. Unexplained variation must be fixed before a screenshot can be trusted as a check. Intentional visual changes need explicit review.
 
-### Agents and project maintainers
+**Test what the person actually does.** A test should use the application's ordinary interface and check the result. A screenshot alone doesn't prove that the action worked.
 
-Practica is also for maintainers who want to prepare repositories for agent work. Agents perform better when a project explains itself: how to build it, how to test it, what conventions matter, where risks live, and what exact outcomes the software must produce.
+**Prove shared components in real projects.** Keep the tests and old examples that show which behavior must be preserved. Reuse should remove duplicated code and maintenance.
 
-The agent-facing material should help projects:
+These are the standards we're building toward. They aren't a claim that every part of this young project already meets them. Each instruction and component needs evidence that it works.
 
-- Provide durable instructions instead of one-off prompts.
-- Encode engineering norms close to the code.
-- Offer reusable skills for common development tasks.
-- Make verification cheap and expected.
-- Make plausible but wrong changes easier to detect, reject, and correct.
+## How we'll teach it
 
-## Editorial Principles
+Use worked examples and direct instructions. If we say “give the agent context,” show which files to give it, what questions to settle, and how to tell whether the information was enough.
 
-### Exact quality over novelty
+Keep decisions, instructions and test results available for review. Explain failures and limits plainly. Improve the method when real use shows that a step is unclear or a component doesn't behave as intended.
 
-Practica is not a catalog of tricks. It should prefer practices that survive contact with real repositories, real review, and real release pressure while pushing systems closer to their intended behavior.
+## What success looks like
 
-### Specificity over vibes
-
-Advice should be operational. If a chapter says "give the agent context," it should show what context, where to put it, when to update it, and how to tell whether it worked.
-
-### Human authority, machine leverage
-
-Agents should increase the reach and precision of human programmers, not replace engineering responsibility. The books should treat human judgment as the governing layer and agent output as work to direct, inspect, and integrate.
-
-### Feedback loops everywhere
-
-Good agent work depends on fast correction. The project should emphasize tests, linters, screenshots, logs, review comments, task checklists, and explicit uncertainty as normal parts of the workflow. Every feedback loop should make the system more faithful to engineering intent.
-
-### Instructions as infrastructure
-
-Rules, skills, and repository guidance are software infrastructure. They should be versioned, reviewed, improved, and measured by whether they produce more exact outcomes.
-
-## Intended Artifacts
-
-Practica should eventually produce:
-
-- Book manuscripts for **Effective Agents** and **Machina Practica**.
-- Reusable agent skills and rule files.
-- Project templates for agent-ready repositories.
-- Checklists for task intake, implementation, review, and release.
-- Examples drawn from realistic software maintenance work.
-
-The repo should make it easy to read the books and to extract useful instructions into another project.
-
-## Definition of Success
-
-Practica succeeds if it helps programmers get more reliable work from agents while continually raising the quality bar for software projects.
-
-The books should make readers more precise. The rules should make agents more dependable. The repository should become a practical bridge between human engineering judgment and machine execution in service of systems that do exactly what their teams intend.
+A programmer can understand the method, direct an agent with it, and check the result without reconstructing the agent's reasoning. The agent can follow the agreed steps and reuse components without quietly lowering the quality bar. Real projects show less repeated work and more reliable results.
