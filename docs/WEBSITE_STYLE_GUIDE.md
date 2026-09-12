@@ -8,13 +8,13 @@ This guide applies to public pages, navigation, headings, metadata, captions, er
 
 A new reader should understand these three parts from the home page:
 
-1. The programmer's guide teaches you to direct the agent effectively.
+1. *Effective Agents*, the programmer's guide, teaches you to direct the agent effectively.
 2. The skills make the agent effective within that shared method.
 3. The packages provide tested components for reliable results across projects.
 
 Call the complete offering a **system for building reliable software**. Use **method** for the way of working within that system. The guide, skills and packages reinforce one another: the programmer learns the method, the agent follows it, and tested components provide consistent behavior across projects and problem domains.
 
-Lead with what the project is and what a reader can do with it. Introduce the book titles after that. Explain that the companion manual and the overall project share the name Machina Practica when both appear on a page.
+Lead with what the project is and what a reader can do with it. Name *Effective Agents* when introducing the programmer's guide; they are the same book. Describe *Machina Practica*, the companion book, as a walkthrough of the skills' goals and design for people and agents who want to understand, improve and maintain them. Explain that this book and the overall system share a name. Both books use Markdown source; Typst print editions are planned, not available.
 
 ## Learn from the edited introduction
 
@@ -96,8 +96,8 @@ Keep status concise and distinct from the main explanation. State missing manusc
 
 ## Use consistent names
 
-- **Machina Practica:** the complete software development system; also the planned companion manual for agents.
-- **Effective Agents:** the planned programmer's guide.
+- **Machina Practica:** the complete software development system; also the companion book explaining the skills' goals, design and maintenance.
+- **Effective Agents:** the programmer's guide itself. Name it directly, rather than presenting it as a separate resource.
 - **Agent:** a coding tool that can read instructions and work in a repository. Define it when writing for unfamiliar readers.
 - **Skill:** reusable task instructions, sometimes with reference files and tools. State which host packaging is actually supported.
 - **Package:** reusable software code. Name the job it does before discussing its release machinery.

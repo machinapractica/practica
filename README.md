@@ -1,16 +1,16 @@
 # Practica · Machina Practica
 
-Machina Practica is a system for building reliable software. It combines a programmer's guide, effective agent skills and reusable software packages. This repository holds the website, planned books, and agent skills.
+Machina Practica is a system for building reliable software. It combines a programmer's guide, effective agent skills and reusable software packages. This repository holds the website, book drafts, and agent skills.
 
 The three parts fit together:
 
-- The programmer's guide teaches you to direct the agent effectively.
+- *Effective Agents*, the programmer's guide, teaches you to direct the agent effectively.
 - The skills give the agent instructions that match the method you've learned.
 - The [`@machinapractica/*` packages](https://github.com/machinapractica/packages) give it tested software components to reuse.
 
 Tested components support reliable results across projects and problem domains. We expect race conditions to be avoided by design, CI to be repeatable, and screenshots to be deterministic in their declared environment. Each part still has to demonstrate that it meets those expectations.
 
-[Eight experimental skills](docs/SKILLS.md) and two alpha packages are available. The planned books, *Effective Agents* for humans and *Machina Practica* for agents, don't yet have published manuscripts. The skills haven't been used to create a project, and the packages have no consumer adopters yet.
+[Eight experimental skills](docs/SKILLS.md) and two alpha packages are available. *Effective Agents* has a [draft table of contents and first chapter](books/effective-agents/README.md). The companion book, *Machina Practica*, will explain the skills' goals and design to help people and agents maintain them. Both use Markdown source, with Typst print editions planned. The skills haven't been used to create a project, and the packages have no consumer adopters yet.
 
 Read [how it works](https://machinapractica.com/method/) on the website. Use the [website style guide](docs/WEBSITE_STYLE_GUIDE.md) when editing public copy.
 

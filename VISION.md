@@ -12,7 +12,7 @@ The system has three parts:
 
 You direct the work. The agent applies the skills. Tested components provide the foundation for reliable results.
 
-The planned programmer's guide is called *Effective Agents*. Its companion manual for agents is called *Machina Practica*. The skills and packages also support individual development tasks.
+*Effective Agents* is the programmer's guide. *Machina Practica*, the companion book, walks through the skills and their goals so people and agents can understand, improve and maintain them. Both books use Markdown source, with Typst print editions planned. The skills and packages also support individual development tasks.
 
 ## Who this is for
 
