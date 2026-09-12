@@ -2,43 +2,30 @@
 
 The programmer's guide to building reliable software with agents.
 
-**Review draft — 12 September 2026.** This is a proposed table of contents. Only [Chapter 1](01-direct-the-work.md) has been drafted. Chapter titles and sequence are open for review.
+**Review draft — 12 September 2026.** The book starts with establishing a product and building a working foundation. Only [Chapter 1: Describe the product](01-describe-the-product.md) is drafted; the remaining chapters are an outline.
 
-## Part I: Direct the work
+The method is being extracted from the projects behind the Machina Practica components. The [source notes](SOURCE_NOTES.md) identify the repositories, revisions and observed practices behind this draft. Chapter order is our organization of those practices; the projects did not all follow an identical sequence.
 
-1. **[Direct the work](01-direct-the-work.md).** Define a useful result, set boundaries, and delegate a change you can check. Follow one example from the initial request to acceptance.
-2. **Give the agent what it needs.** Supply repository instructions, domain rules and examples. Keep decisions in durable documents and resolve questions that affect the result.
-3. **Agree on scope and authority.** Decide what the agent can carry through independently and where it must stop. Handle discoveries and changes of direction without repeating approvals.
+## Part I: Build a project that can be trusted
 
-## Part II: Build a project that can be trusted
+1. **[Describe the product](01-describe-the-product.md).** Establish the product's purpose, intended experience and boundaries. Read the domain sources. Use the early Sudoku, Hunger, Player and RoboRally documents to understand what belongs in the foundation.
+2. **Make the blank application work.** Build and launch the target application, establish its test contract, identify the build, and prove the deployment or installation path. Compare the web foundations in Sudoku, Hunger, X-Wing and RoboRally with Player's native launch story.
+3. **Design the first useful journey.** Turn the product into a complete experience with explicit state, recovery and privacy decisions. Compare Hunger's check-ins, Player's import-to-playback path and the shared/private surfaces in the games.
+4. **Plan changes you can try.** Use the tracer plans from Hunger, Player, X-Wing and RoboRally: each increment crosses the real application and ends in a user-visible result. Preserve the differences in their commit and PR arrangements.
 
-4. **Describe the product.** Write a short vision: who it serves, what they can do, and what belongs outside it. Use that vision to settle implementation choices.
-5. **Make the blank application work.** Establish the build, launch test and source identity before adding features. Provide one command that checks the production output.
-6. **Design the first useful journey.** Describe what a person sees and does, including empty states, errors and recovery. Select components that support that journey.
-7. **Plan changes you can try.** Break the journey into small, complete changes. Give each one a starting state, expected behavior and a way to verify it.
+## Part II: Deliver reliable changes
 
-## Part III: Deliver reliable changes
+5. **Build with skills and shared components.** Follow the recorded reuse from Food and Jaipur into Hunger, and from Jaipur and RoboRally into X-Wing. Explain what Machina Practica is extracting from those local implementations and what still needs consumer validation.
+6. **Make results repeatable.** Work through the source projects' explicit inputs, isolated state, observable waits, semantic checks and reviewed screenshots. Apply the system's exact-comparison requirement while recording source deviations honestly.
+7. **Investigate a failure.** Develop a case study from a retained source fix, its test and its follow-up history. Select and inspect that history before drafting the chapter.
+8. **Review and release the result.** Connect a completed user journey to its walkthrough, screenshots, source revision and deployed or installed artifact. Preserve the native qualification limits documented in Player.
 
-8. **Build with skills and shared components.** Choose the instructions and packages that fit the task. Check their assumptions and preserve the behavior other projects depend on.
-9. **Make results repeatable.** Design explicit state transitions. Control the environment, data, time and external services. Require repeatable CI and exact screenshots within a declared rendering environment.
-10. **Investigate a failure.** Reproduce the problem, trace its cause and verify the fix. Work through a timing defect without accepting retries or relaxed comparisons as the solution.
-11. **Review and release the result.** Try the ordinary user journey, inspect the change and test records, and identify the build being released. Distinguish completed work from remaining limits.
+## Part III: Keep the system useful
 
-## Part IV: Keep the system useful
+9. **Extract what repeats.** Compare implementations, separate common mechanics from product policy, and test compatibility. Use the testing and build-info extraction records; distinguish retained references from actual package adopters.
 
-12. **Improve the way you work.** Turn recurring explanations and repairs into better instructions or components. Check that an improvement works in the projects it is meant to help.
+## Editorial work remaining
 
-## Planned reference material
-
-- A task brief with a worked example.
-- A guide to the phase skills and when each is useful.
-- A review checklist for behavior, repeatability and release status.
-- A glossary of terms used in the book.
-
-## Questions for this draft's review
-
-- Does Chapter 1 establish the reader's role clearly enough to start using the method?
-- Is the export example concrete enough, and should it continue through the later chapters?
-- Does this sequence give enough attention to changing existing software as well as starting projects?
+Review the opening chapter against its sources, then draft the application-foundation chapter from the early shell commits and their launch tests. Later chapters need equally specific source studies before prose is written. No invented application or generic prompting prelude is part of this outline.
 
 The [book source and edition plan](../README.md) describes Markdown authorship and the planned Typst print editions.

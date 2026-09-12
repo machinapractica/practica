@@ -12,17 +12,17 @@ Two books explain the system: *Effective Agents* teaches you to direct coding ag
 
 **The programmer's guide to building reliable software with agents.**
 
-You'll learn to define the result, give the agent useful instructions, and check the software it delivers. Worked examples take you through setting up a project, making a change, investigating a failure, and reviewing the result.
+The book starts with describing the product and establishing a working application and test environment. It follows practices repeated in the projects behind our reusable components: product and domain documents, complete implementation slices, and checks through the real application. Examples come from those repositories.
 
 The book teaches you to:
 
-- Describe what the software should do and set the scope of the work.
-- Give the agent the rules and source material it needs.
-- Delegate work in useful pieces, with clear authority to carry it through.
+- Establish the product vision and understand the domain.
+- Prove the application can build, launch and be tested.
+- Design and implement complete user journeys.
 - Build with tested components and repeatable checks.
 - Investigate failures and accept work against the result you asked for.
 
-Start with the [draft table of contents](https://github.com/machinapractica/practica/blob/main/books/effective-agents/README.md) or [Chapter 1: Direct the work](https://github.com/machinapractica/practica/blob/main/books/effective-agents/01-direct-the-work.md). Both are drafts for review.
+Start with the [draft table of contents](https://github.com/machinapractica/practica/blob/main/books/effective-agents/README.md) or [Chapter 1: Describe the product](https://github.com/machinapractica/practica/blob/main/books/effective-agents/01-describe-the-product.md). Both are drafts for review. The [source notes](https://github.com/machinapractica/practica/blob/main/books/effective-agents/SOURCE_NOTES.md) trace the draft to the inspected projects.
 
 <h2 id="machina-practica">Machina Practica</h2>
 
