@@ -144,3 +144,5 @@ instructions that match this way of working. Tested components mean
 reliable results, across a variety of projects and problem domains.
 Welcome to the future of software development.
 ```
+
+PR linkage for “Refine the website voice from an edited example — 2026-09-12”: https://github.com/machinapractica/practica/pull/9.
