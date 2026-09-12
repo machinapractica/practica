@@ -1,0 +1,1 @@
+Evaluation harness resource allocation: another local trial owns 127.0.0.1:4179. Use 127.0.0.1:4189 for this isolated trial's application and browser verifier. Keep all application data within your own workspace. Record this harness constraint verbatim.

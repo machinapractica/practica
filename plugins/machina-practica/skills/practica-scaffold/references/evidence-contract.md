@@ -1,6 +1,6 @@
-# Machina Practica evidence contract 1.0.0
+# Machina Practica evidence contract 1.0.1
 
-Record `Machina Practica evidence contract: 1.0.0`, the selected profile, project adaptations, canonical baseline environment, and current source revision in E2E_GUIDE.md. Preserve project-specific scenario maps when upgrading the contract.
+Record `Machina Practica evidence contract: 1.0.1`, the selected profile, project adaptations, canonical baseline environment, and current source revision in E2E_GUIDE.md. Preserve project-specific scenario maps when upgrading the contract.
 
 A scenario proves only the interactions and assertions it actually executes on the tested artifact. It does not prove physical hardware, production credentials, security review, accessibility conformance, or other engines by implication.
 
@@ -20,7 +20,7 @@ Bundle test-critical fonts/assets, isolate temporary storage per scenario, and u
 
 Build and launch the release/production artifact with the same public entry point used by people. Expose its source identity. Use one documented verifier that propagates failures and retains logs, screenshots, traces, and native result bundles even on failure. Readiness checks need deadlines; launch failures must clean up owned processes.
 
-Choose canonical phone/desktop/tabletop or native devices from the project, not from this template. Screenshots are candidates until reviewed. Exact RGBA/zero-pixel comparison is an opt-in policy on a pinned rendering environment; encoded PNG byte equality is not pixel equality. Cross-platform output is separate evidence, not a replacement baseline. Baseline update writes candidates and never silently approves them; review records identify candidate hashes and source.
+Choose canonical phone/desktop/tabletop or native devices from the project, not from this template. Screenshots are candidates until reviewed. Require exact RGBA/zero-pixel comparison in the pinned rendering environment; encoded PNG byte equality is not pixel equality. Do not mask changing regions or introduce fuzzy tolerances to hide unexplained variation. Cross-platform output is separate evidence, not a replacement baseline. Baseline update writes candidates and never silently approves them; review records identify candidate hashes and source.
 
 ## CI and delivery
 

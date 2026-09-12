@@ -1,0 +1,6 @@
+{
+  "revision": "295745a40f0c21c626a91c16bbedd615e78bb77b",
+  "bundleSha256": "cbaa87ab2b9f48284de8d0e26176aada8f6a2be5e0acc6ec52fc04c109c83bde",
+  "artifact": "sha256:1f8928514c6266a473eef592053c5d9e8bfa49b651c810139fb0a6afeeec4d3a",
+  "note": "Source and local Git history only. Runtime data, dependencies and full evidence directories are excluded."
+}

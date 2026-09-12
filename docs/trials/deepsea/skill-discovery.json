@@ -1,0 +1,41 @@
+{
+  "command": "Codex app-server skills/list",
+  "codexVersion": "0.154.0",
+  "bundleVersion": "0.1.1",
+  "project": "/private/tmp/machina-skill-discovery-011",
+  "skills": [
+    {
+      "name": "practica-audit",
+      "path": "/private/tmp/machina-skill-discovery-011/.agents/skills/practica-audit/SKILL.md"
+    },
+    {
+      "name": "practica-domain",
+      "path": "/private/tmp/machina-skill-discovery-011/.agents/skills/practica-domain/SKILL.md"
+    },
+    {
+      "name": "practica-mvp-design",
+      "path": "/private/tmp/machina-skill-discovery-011/.agents/skills/practica-mvp-design/SKILL.md"
+    },
+    {
+      "name": "practica-plan",
+      "path": "/private/tmp/machina-skill-discovery-011/.agents/skills/practica-plan/SKILL.md"
+    },
+    {
+      "name": "practica-project",
+      "path": "/private/tmp/machina-skill-discovery-011/.agents/skills/practica-project/SKILL.md"
+    },
+    {
+      "name": "practica-scaffold",
+      "path": "/private/tmp/machina-skill-discovery-011/.agents/skills/practica-scaffold/SKILL.md"
+    },
+    {
+      "name": "practica-tracer",
+      "path": "/private/tmp/machina-skill-discovery-011/.agents/skills/practica-tracer/SKILL.md"
+    },
+    {
+      "name": "practica-vision",
+      "path": "/private/tmp/machina-skill-discovery-011/.agents/skills/practica-vision/SKILL.md"
+    }
+  ],
+  "errors": []
+}

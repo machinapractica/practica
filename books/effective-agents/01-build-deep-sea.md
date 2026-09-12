@@ -1,212 +1,87 @@
 # 1. Build a game: Deep Sea
 
-Let's build a multiplayer browser game. Each player is a diver looking for treasure. Everyone shares the oxygen supply, and each diver has to decide when to turn back. Your job is to guide a coding agent from an empty directory to a game you can play with friends.
+Let's build a game you can play with friends. Each player is a diver looking for treasure. Everyone shares the oxygen supply. Carry more treasure and you use more oxygen; stay down too long and you lose what you collected. After three dives, the player with the most treasure wins.
 
-We'll use Deep Sea Adventure by Oink Games as the game to implement. Work through the steps in order. At each step, give the agent the prompt, read or try what it produces, and correct anything that doesn't match the game you intend to build.
+We'll build a browser version of Deep Sea Adventure. You'll describe the game, answer a few product questions and try what the agent builds. The Machina Practica skills handle the development method: where decisions belong, how to divide the work, which components to reuse and how to verify the result.
 
-The prompts below are ready to adapt. They name the result for each step; the agent handles the file edits, commands and pull requests. A pull request, or PR, groups changes so you can review them before they become part of the main version of your project.
+## Set up an empty project
 
-## Before you start
+You'll need a coding agent that can edit files and run commands. This walkthrough uses Codex and the Machina Practica skills. Start with a checkout of [the Machina Practica repository](https://github.com/machinapractica/practica), then run this command from that checkout:
 
-You'll need a coding agent that can edit files and run terminal commands, a GitHub account, and Nix with flakes enabled. Later, you'll need a Firebase project for the multiplayer preview. Use two browser profiles or separate devices when testing players; two tabs can share the same player identity.
-
-Create an empty directory called `deepsea-learning` and open your agent there. Keep the project separate from any existing game repository. Have the game's rules available for the agent to read. Use the base game, without the Boost expansion, and use simple original shapes for the graphics.
-
-You don't need to install the Machina Practica skills to follow this chapter. Here, you'll give the instructions explicitly and learn what each stage is for.
-
-## 1. Describe the game
-
-Begin with two short documents:
-
-```text
-We're building a multiplayer web version of Deep Sea Adventure by Oink
-Games, with each player using their own device. Write README.md and
-VISION.md.
-
-Keep VISION.md about the finished experience: the tension of collecting
-treasure, sharing oxygen and deciding when to return. Put current project
-status in README.md. Leave milestones, implementation plans, visual
-direction and success criteria out of the vision.
+```sh
+python3 scripts/install-project-skills.py ../deepsea-learning
 ```
 
-Read both files. The vision can be a couple of paragraphs. It should describe the game you want people to experience. If it starts choosing a framework, planning releases or designing screens, ask the agent to move those decisions out.
+Open `deepsea-learning` in Codex. The installer puts the skills and their supporting files in the project's `.agents` directory. Select `practica-vision` from the skill picker; if it doesn't appear in an existing session, restart that session.
 
-Check the multiplayer assumption now. “A game for several players” could mean passing one device around. This game gives each player their own browser.
+We'll keep the game local for this exercise. You can test two players using separate browser profiles on one computer. The agent will set up the application's tools and give you the command to run it.
 
-## 2. Put the project on GitHub
+## Describe the game
 
-Keep a record of your prompts as you work. This will let you return to a decision and see what you actually asked for.
-
-```text
-Record all my project prompts so far verbatim in PROMPTS.md. For future
-entries, use a numbered heading with a short summary, then the exact prompt.
-Add a Husky pre-commit check that requires a prompt-log update with project
-changes and preserves earlier entries.
-
-Use a Nix flake for Git, gh and the other development tools we need, and
-commit its lockfile. Check GitHub authentication and guide me through login
-if necessary. Create a public repository named deepsea-learning under my
-GitHub account, with GPLv3 for our original contributions.
-
-Keep main as an empty starting point and open the initial documentation
-and tooling as a PR for review.
-```
-
-The agent may need you to complete a browser login. Once authenticated, let it create the repository and PR. Check that the documents are in the PR, rather than already merged into `main`.
-
-Read the changes and have the agent fix anything missing. Then tell it to merge the PR and return to an up-to-date `main`. Repeat that review-and-merge step at the later milestones too.
-
-## 3. Establish the rules and MVP
-
-The minimum viable product, or MVP, is the first complete version you intend to play. For this game, use a private group of two to six friends, playing from separate browsers.
+Give the agent this request:
 
 ```text
-On a new branch, read the base-game rules and write RULES_SUMMARY.md.
-Identify the sources and distinguish verified rules from ambiguities or
-proposed resolutions. Cover setup, turns, oxygen, movement, treasure,
-returning, lost treasure, subsequent dives and final scoring.
-
-Write MVP_DESIGN.md for a multiplayer browser game for two to six friends.
-Use SvelteKit and TypeScript, static hosting on GitHub Pages, anonymous
-Firebase identities and an immutable Firestore event history. Derive game
-state by deterministic replay. Include creating and joining a room,
-readiness, three dives, results, reload and reconnect behavior.
-
-Assume invited friends who trust each other. Leave bots, matchmaking,
-chat and ranked play outside this MVP. Explain the limits of client-side
-hidden information. Write a standalone design for this game, with open
-questions clearly identified. Open a PR for review.
+$practica-vision I want to build Deep Sea Adventure as a multiplayer web game for friends on their own devices. Write the README and vision.
 ```
 
-Read the rules summary against your rulebook. Pay particular attention to when oxygen is charged, what happens to a diver who fails to return, and how lost treasure is arranged for the next dive. Ask about discrepancies before accepting an interpretation. Record any resolution that is a project convention as such.
+Read the result. Does it describe the game you want to make? The agent may ask whether you want a faithful adaptation or changes to the rules, and whether the friends will be together or remote. Those are useful questions: their answers change the product.
 
-Read the room flow as a player. Can a friend open an invitation and join? What happens after a reload? What happens if the host leaves? These decisions belong in the design before they become accidental behavior in code.
+The vision skill already knows that the vision describes the intended experience and that implementation decisions belong elsewhere. You don't have to teach it that in your prompt.
 
-The event history is how browsers agree. It records accepted actions, and replay derives the current board from them. A reload should reconstruct the same game, including dice already rolled. This architecture assumes trusted friends: hiding treasure in the interface does not conceal it from someone inspecting the downloaded data. Accept that limitation for this exercise.
+For this exercise, choose the base game and GPLv3 for your code. We'll use the [rules summary prepared for Deepsea](https://github.com/anicolao/deepsea/blob/f7caf9f4d7473f637ac6cbc71509f545c59e8d9a/RULES_SUMMARY.md) as starting material. It identifies its sources and labels the conventions chosen for that implementation. Use simple original graphics.
 
-## 4. Design what players see
+## Get the first page running
 
-Now make the experience concrete:
+Continue in the same session:
 
 ```text
-Create UX_DESIGN.md with generated mockups so we can review the user
-experience. Show phone and desktop layouts for creating and joining a
-room, readiness, a diver's turn, returning, lost-treasure cleanup and
-results. Include waiting, pending actions, errors and reconnection.
+The vision is accepted. Use a faithful base-game adaptation for friends, with GPLv3 for our code. Use the rules and explicitly documented project conventions in https://github.com/anicolao/deepsea/blob/f7caf9f4d7473f637ac6cbc71509f545c59e8d9a/RULES_SUMMARY.md as the starting material.
 
-Make oxygen, the active diver, carried treasure and available actions easy
-to understand. Explain how each screen leads to the next. Use original
-placeholder graphics. Open the design as the next PR.
+$practica-project Summarize the rules, then build and verify the blank web application. Keep this trial local for now.
 ```
 
-Use an agent with image-generation support for this step. The pictures are design references; the application still has to be built.
+`practica-project` selects the skills needed for the request. Here it uses the domain skill to establish the rules, then the scaffold skill to get the application running. A scaffold is the smallest running application with its build and tests in place.
 
-Walk through the mockups in order. On a turn screen, can you tell whose turn it is and what you can do? On a waiting screen, can you tell what you're waiting for? On a small phone, can you read the oxygen supply without scrolling away from the action?
+Read the rules summary. Check when oxygen is used, how treasure slows a diver, what happens to lost treasure and how the next dive begins. If a rule differs from the game you want, resolve that product decision now.
 
-Give concrete feedback and have the agent update the design. Merge it when the intended player journey is clear.
+Then start the application using the command the agent provides. You'll see a simple page identifying the game. It won't have playable controls yet. The first running version establishes the build and browser checks before game behavior is added.
 
-## 5. Build a coming-soon page and prove it works
+The agent should also give you a verification result and screenshots from phone and desktop layouts. Open the screenshots. Review the page before accepting its screenshots as the reference for later runs. Subsequent checks should match that reference with zero changed pixels in the same rendering environment. The scaffold skill supplies those requirements; they aren't extra instructions for you to paste into every request.
 
-Your first running version is deliberately small: a page that identifies the game and says it is coming soon. Use it to establish the build, tests and preview deployment.
+## Build the playable game
 
-Give the agent this reference for the testing mechanics:
-
-[Deep Sea E2E guide](https://github.com/anicolao/deepsea/blob/f7caf9f4d7473f637ac6cbc71509f545c59e8d9a/E2E_GUIDE.md).
+Once you've accepted the rules and tried the page, ask for the game:
 
 ```text
-Write E2E_GUIDE.md and build the initial application with only a
-splash/coming-soon screen. Adapt the supplied E2E guide for this repository.
+The rules and blank app are accepted.
 
-Run browser tests against the production build on phone and desktop.
-Use bounded waits for observable state, never fixed delays. Verify meaning
-before screenshots, with no masking, fuzzy comparison or retries. Require
-zero pixel differences in the pinned rendering environment. Generate each
-scenario's walkthrough from the same steps as its checks and screenshots.
-
-Provide one verification command. Enforce the E2E rules in pre-commit
-checks and CI, including tests showing that prohibited patterns fail.
-Publish the exact tested build at a retained PR preview URL. Open a PR.
+$practica-project Design and plan the playable Deep Sea game, then implement the plan. Keep it local for this trial, with friends joining from separate browsers. I want to play a complete three-dive game and start another one.
 ```
 
-Open the preview link yourself, on a phone as well as a desktop if available. You should see the game title and coming-soon message. There should be no controls pretending to start a game.
+This request authorizes the agent to work through design, planning and implementation. You can read the documents as it goes. You don't need to approve each file before it can continue.
 
-Read the generated test walkthrough. Check that it describes the page you opened and contains screenshots from both screen sizes. Ask the agent to show which checks enforce each rule in the E2E guide. A rule written in a Markdown file still needs an implementation.
+The design describes what players can do and how their browsers agree on the game. The plan divides that design into usable steps: get players into a room, play turns, finish dives and show the result. The implementation skill builds and checks those steps, using shared packages where they fit.
 
-Have the agent investigate any failing check. Review intentional visual changes before accepting new screenshot baselines. Once the page, verification and preview all work, merge the PR.
+These are responsibilities of the skills. Your prompt supplies the outcome: a complete game for friends, running locally. You can make a different product choice without rewriting the development procedure.
 
-## 6. Plan the route to a playable game
+![A diver choosing whether to collect treasure, with shared oxygen, the crew and the dive path visible.](../../docs/trials/deepsea/03-playable/desktop-game.png)
 
-You now have a design and a working delivery path. Ask for the implementation sequence:
+## Play it
 
-```text
-Write IMPLEMENTATION_PLAN.md on a new branch. Start from the tested
-coming-soon page and lay out the work to reach the complete multiplayer
-MVP. For each step, describe what a player can do, its dependencies and
-how we will verify it. Keep unfinished work clearly marked. Open a PR.
-```
+Use the agent's run instructions. Open the game in two separate browser profiles so each player has their own identity.
 
-Look for this progression: settle the remaining rules and replay decisions; establish multiplayer storage and tests; create and join a room; play a turn; finish a dive; complete three dives; recover from interruptions; check the full experience and deployment.
+1. Create a room with the first player, then use its room code to join as the second.
+2. Choose the first diver and start the game.
+3. Take turns collecting treasure. Watch the shared oxygen and decide when to return.
+4. Reload one player's browser during play. Continue from the same turn.
+5. Finish all three dives, read the result and start another game.
 
-Infrastructure has to lead somewhere you can try. Group the room foundation with its interface so the first multiplayer PR lets you create a room and invite another player.
+After a dive, stranded players confirm the order of their lost treasure. Once everyone has finished, the host can start the next dive.
 
-## 7. Get two players into a room
+Try both sides of the central decision. Return early with a little treasure, then try a dive where you keep going until the oxygen runs out. The rules should make the consequences clear in both browsers.
 
-Build that first complete path:
+Look at the agent's verification report alongside your own playthrough. It should say which journeys were tested, which build was tested and where to find the screenshots. Automated checks and your review answer different questions: the checks establish specific behavior; playing tells you whether the game makes sense to a person.
 
-```text
-Implement the foundation through the room, readiness and start flow.
-Resolve the open rules decisions explicitly and record the accepted
-versions. Add the emulator tests, immutable event repository and real UI
-needed for two players to create, invite, join, ready and start.
+If you find a problem, describe what you did, what happened and what you expected. “I saw Alice join, then she disappeared from my roster” gives the agent a defect to investigate. The agent should reproduce it and fix the cause. A recurring failure is a reason to improve the relevant skill or shared component.
 
-Every PR must include a working preview and manual steps I can follow.
-Provision a dedicated preview backend as part of this work; ask me for
-any account setup you cannot complete with the available access.
-
-Browser scenarios must create the room and join through ordinary controls,
-using independent player contexts. Do not create a database fixture and
-navigate straight to a populated room as proof that this journey works.
-Run verification and the deployed-preview journey before reporting ready.
-```
-
-Firebase emulators support isolated local tests. The hosted preview also needs a real preview backend. Give the agent access to configure that environment when needed, then have it verify the deployed URL. A working static page with a disconnected backend is unfinished multiplayer work.
-
-Try the preview from the beginning:
-
-1. Enter a name and create a room.
-2. Copy the invitation into a separate browser profile or send it to a friend.
-3. Join with a second name. Both browsers should show the same roster.
-4. Ready both players, choose the first diver as host, and start.
-5. Reload each browser. Each player should retain their seat and see the confirmed start.
-
-Also try joining after the room has started. The newcomer should receive an explanation, not silently appear in the crew.
-
-If the agent only demonstrates preloaded data, send it back to complete this path. Your acceptance check is whether you can perform the promised actions on the preview.
-
-## 8. Add the game in playable increments
-
-Once the lobby works, return to the plan. Build one complete turn next:
-
-```text
-Implement the next complete player journey: a diver chooses direction,
-rolls, moves and resolves the landing choice. The other browser must see
-the same confirmed oxygen, position, cargo and next player. Reload must
-not reroll the dice or charge oxygen twice.
-
-Include the rules, persistence, UI and tests required for that journey.
-Keep the PR preview usable and give me the steps to try it. Leave later
-plan items for subsequent PRs.
-```
-
-Play the turn in two browsers. Follow what happens in the observing browser as well as the active one. A multiplayer action is complete when everyone sees the agreed result.
-
-Continue with the next two increments:
-
-- **Finish a dive.** Exercise a safe return and a loss, review the treasure and scores, and complete cleanup. Both browsers must agree before continuing.
-- **Finish a game.** Play three dives, inspect the final result, then create a new game. The completed game's history should remain available.
-
-For each increment, ask the agent to implement the next named journey from the plan, run its checks and provide a usable preview. Try it before merging. Keep checks for earlier journeys running as the game grows.
-
-Finally, work through the plan's remaining recovery, six-player, keyboard, phone and deployment checks. Disconnect and reconnect a player. Reload during play. Try the invitation from another device. Record anything still unverified instead of marking the whole MVP complete because the happy path works once.
-
-You've now worked through the method at the scale of a game: describe it, understand its rules, design the experience, establish a tested delivery path, and build complete player journeys. The following chapters examine those stages in more detail.
+[Trial results and scope](../../docs/trials/deepsea/README.md) record what has actually been exercised for this draft.

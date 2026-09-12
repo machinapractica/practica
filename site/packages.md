@@ -12,7 +12,7 @@ The skills guide the work. The packages provide the code. Together, they let the
 
 ## Available now
 
-Two experimental packages are published at `0.1.0-alpha.0`. Both are early releases, with no consumer adopters yet.
+Two experimental packages are published at `0.1.0-alpha.0`. Both are early releases. The [Deep Sea trial](https://github.com/machinapractica/practica/blob/main/docs/trials/deepsea/README.md) uses them in a new local application; adoption in the existing source projects remains future work.
 
 ### @machinapractica/testing
 

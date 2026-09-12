@@ -1,0 +1,30 @@
+{
+  "contract": "1.0.1",
+  "revision": "a04fe13675e96f3a803a5fe1870373ba2633c84d",
+  "mode": "candidate",
+  "run": "/private/tmp/machina-deepsea-fresh-lobby/evidence/runs/a04fe13675e96f3a803a5fe1870373ba2633c84d/2026-09-12T16-24-09.641Z",
+  "status": "failed",
+  "checks": [
+    {
+      "label": "dependencies",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "wait-policy",
+      "status": "failed",
+      "exitCode": 1
+    }
+  ],
+  "build": {
+    "revision": "a04fe13675e96f3a803a5fe1870373ba2633c84d",
+    "files": {
+      "index.html": "75c9b18d3a2bb8aba4ace0fbca369ec60282f7cd8bc94a54fe37b00fe4093fd4",
+      "style.css": "7da3cb1cbab7b66b436c45cbff0cd312451925b554a52b5ce38b8e3cafae41f5",
+      "app.js": "d6d88ad509b7adad0a28f2500473da0b9dc55f3bad6d11adfaaaa282435f843e",
+      "font.woff2": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757",
+      "FONT_LICENSE.txt": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7"
+    },
+    "artifact": "6459e5365da0ade0eedb4ca701e3c66602e1bf60a9b10200faad2d45ff65c8ee"
+  }
+}

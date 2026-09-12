@@ -6,7 +6,7 @@ The programmer's guide to building reliable software with agents.
 
 ## Get started
 
-1. **[Build a game: Deep Sea](01-build-deep-sea.md).** Begin in an empty directory. Describe the game, establish its rules, design the experience, publish a tested coming-soon page, then build multiplayer player journeys.
+1. **[Build a game: Deep Sea](01-build-deep-sea.md).** Install the skills in an empty project. Describe the game, try the first page, then ask the agent to build a complete game you can play in separate browsers.
 
 ## Understand each stage
 
@@ -25,6 +25,6 @@ The programmer's guide to building reliable software with agents.
 
 ## Draft status
 
-Chapter 1 follows Deepsea's recorded prompt sequence through its working multiplayer lobby. Its final gameplay exercise follows the remaining implementation plan; that portion has not yet been completed in the source project or trialled as a reader tutorial. Review the teaching flow now; qualify the full build before publishing it as an exercised start-to-finish tutorial.
+Chapter 1 uses short product requests with the Machina Practica skills. The exercise has been run from vision through a complete local three-dive game and rematch. The [trial report](../../docs/trials/deepsea/README.md) records the results, framework corrections and fresh lobby evaluation. Physical devices and public deployment remain unqualified.
 
 [Editorial source notes](SOURCE_NOTES.md) retain the provenance and limits outside the chapter. [Book source and editions](../README.md) describes Markdown authorship and planned Typst print editions.

@@ -1,0 +1,5 @@
+Continue in /Users/anicolao/projects/machinapractica/deepsea-framework-trial. Use the current framework skills under /Users/anicolao/projects/machinapractica/practica/plugins/machina-practica/skills, starting with practica-project and loading the skills it selects. Do not edit the framework or other repositories. Local git commits and dependency installation are permitted. Remote writes remain outside this trial. Record this request verbatim. This is a combined design/planning/implementation evaluation; you may make reasonable product decisions within the accepted intent and documented rules conventions. Report milestone progress and retain the result of each verifier run.
+
+The rules and blank app are accepted.
+
+$practica-project Design and plan the playable Deep Sea game, then implement the plan. Keep it local for this trial, with friends joining from separate browsers. I want to play a complete three-dive game and start another one.

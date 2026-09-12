@@ -56,4 +56,4 @@ Read the [skill instructions](https://github.com/machinapractica/practica/blob/m
 
 ## Current status
 
-The skills are experimental. This complete sequence has not yet been used to create a project. Native platform notes also need validation on their target devices.
+The skills are experimental. The [Deep Sea trial](https://github.com/machinapractica/practica/blob/main/docs/trials/deepsea/README.md) exercises project creation locally. Public deployment and native platform notes still need separate qualification.

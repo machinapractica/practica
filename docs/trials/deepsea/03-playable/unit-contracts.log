@@ -1,0 +1,26 @@
+✔ setup has exact base components and hidden client projections (1.036667ms)
+✔ ordinary direction roll collect breathe and safe bank sequence (0.652417ms)
+✔ occupied spaces do not consume distance and occupied deepest overshoot stops legally (0.076625ms)
+✔ zero movement still permits landing and empty-handed return is legal (0.111792ms)
+✔ illegal actors, reversal and landing commands are rejected (0.215167ms)
+✔ blank landing can drop one indivisible carried stack (0.080667ms)
+✔ oxygen-exhausting turn finishes; owners order losses deepest first; stacks stay indivisible (0.145584ms)
+✔ safe return on exhausting turn banks treasure and skips future turns (0.084667ms)
+✔ next dive resets burdens and oxygen, retains bank, and honors next starter (0.110541ms)
+✔ final totals, individual level-4 tiebreak and shared victory (0.226958ms)
+✔ empty path resolves remaining dives with no further points (0.489417ms)
+✔ rematch resets all game facts but preserves seats, with a fresh game identity (0.153459ms)
+✔ deterministic complete games conserve all 32 tiles through losses and all three dives (2.803166ms)
+✔ room membership, capacity, privacy and restart use public API (36.715917ms)
+✔ future schema and failed writes cannot overwrite accepted state (0.711958ms)
+✔ overlapping public joins retain every accepted seat and enforce capacity (6.602542ms)
+✔ overlapping commands conflict or deduplicate without extra accepted moves (12.614833ms)
+✔ production assets match the build and private server/storage paths stay unavailable (17.195417ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 123.98475

@@ -1,0 +1,17 @@
+{
+  "artifact": {
+    "revision": "aa6baa0f452f9c25f1f1051aaa0e64147405e1a5",
+    "files": {
+      "index.html": "bb85be59129e7d23665834608adb29c71e6dc22262eae1856564a876f269b6df",
+      "style.css": "377e7f39977ca2d26a87706b2483b3adeef644af1ed845c0618a104a35aa8c7f",
+      "app.js": "225e0b0b726ca52f762c7a24dd85a369c11c25da20c3da25f0cc2868264707f5",
+      "font.woff2": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757",
+      "FONT_LICENSE.txt": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7"
+    },
+    "artifact": "sha256:c767103afa01d8eaf22ba85eb67135045e13ca85d25aa7d17b0281b941706a79"
+  },
+  "actions": 26,
+  "ordinaryLossFlow": true,
+  "allPlayersStranded": true,
+  "nextDiveStarted": true
+}

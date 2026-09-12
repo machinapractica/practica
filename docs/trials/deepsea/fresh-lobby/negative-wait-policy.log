@@ -1,0 +1,1 @@
+tests/prohibited-wait.spec.mjs:1:7: waitForTimeout is prohibited; wait for observable state or transport completion.
