@@ -44,4 +44,4 @@ In a local checkout, run `git config core.hooksPath .githooks` before committing
 
 ## Website copy
 
-Before changing public copy, read [the website style guide](docs/WEBSITE_STYLE_GUIDE.md). It covers rendered repository documents as well as site pages, navigation and metadata. Explain the human guide, agent skills and software packages in plain language. Preserve the distinction between reliability requirements and demonstrated results. Review the rendered copy on phone and desktop; automated checks cannot judge the voice.
+Before changing public copy, read [the website style guide](docs/WEBSITE_STYLE_GUIDE.md). It covers rendered repository documents as well as site pages, navigation and metadata. Describe the system through its programmer's guide, effective agent skills and reusable packages. Use the confident, concise voice established by the edited example in the style guide. Preserve the distinction between reliability requirements and demonstrated results. Review the rendered copy on phone and desktop; automated checks cannot judge the voice.

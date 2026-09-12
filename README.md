@@ -1,14 +1,14 @@
 # Practica · Machina Practica
 
-Machina Practica is a method for humans and coding agents to build reliable software together. This repository holds the website, planned books, and agent skills.
+Machina Practica is a system for building reliable software. It combines a programmer's guide, effective agent skills and reusable software packages. This repository holds the website, planned books, and agent skills.
 
 The three parts fit together:
 
-- The human guide teaches you how to describe a job, direct the agent, and check its work.
+- The programmer's guide teaches you to direct the agent effectively.
 - The skills give the agent instructions that match the method you've learned.
 - The [`@machinapractica/*` packages](https://github.com/machinapractica/packages) give it tested software components to reuse.
 
-The goal is to build reliable software faster, with less repeated explanation and repair. We expect race conditions to be avoided by design, CI to be repeatable, and screenshots to be deterministic in their declared environment. Each part still has to demonstrate that it meets those expectations.
+Tested components support reliable results across projects and problem domains. We expect race conditions to be avoided by design, CI to be repeatable, and screenshots to be deterministic in their declared environment. Each part still has to demonstrate that it meets those expectations.
 
 [Eight experimental skills](docs/SKILLS.md) and two alpha packages are available. The planned books, *Effective Agents* for humans and *Machina Practica* for agents, don't yet have published manuscripts. The skills haven't been used to create a project, and the packages have no consumer adopters yet.
 

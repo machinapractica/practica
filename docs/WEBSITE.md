@@ -22,7 +22,7 @@ The vision is rendered from VISION.md through a virtual template. The public set
 
 ## Evidence
 
-Playwright opens the ordinary home page at 1440×1000 and 390×844, asserts current status and exact source revision, captures the home page, follows the human guide → goals and method → setup sequence, captures the rewritten pages, and reads package status. Each run attaches its walkthrough and screenshots under test-results/. The HTML report is in playwright-report/; stage logs are in evidence/. CI retains these as revision-named review artifacts, including traces and failure screenshots when a test fails.
+Playwright opens the ordinary home page at 1440×1000 and 390×844, asserts current status and exact source revision, captures the home page, follows the programmer's guide → goals and skills → setup sequence, captures the rewritten pages, and reads package status. Each run attaches its walkthrough and screenshots under test-results/. The HTML report is in playwright-report/; stage logs are in evidence/. CI retains these as revision-named review artifacts, including traces and failure screenshots when a test fails.
 
 The suite also visits every generated HTML page, checks metadata, local links and fragment destinations, asserts responsive document width, and exercises missing-page recovery and keyboard skip navigation. Screenshot capture follows visible semantic assertions. Screenshots are review evidence, not automatically approved pixel baselines. No simulator or Chromium emulation proves physical-device, Safari, Firefox, screen-reader, DNS, TLS, or production behavior.
 

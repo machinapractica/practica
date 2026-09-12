@@ -1,14 +1,14 @@
 ---
 layout: base.njk
-title: The human guide
-description: Learn what you need to decide, what to give a coding agent, and how to check its work. The planned books explain both sides of the method.
+title: The programmer's guide
+description: Learn to direct coding agents effectively, define successful results, and verify the software they deliver.
 permalink: /books/
 ---
-# The human guide
+# The programmer's guide
 
-You need to know how to use the method before you can expect an agent to follow it. The guide will explain what to decide, what to tell the agent, and what to check before accepting its work.
+You'll learn to direct coding agents effectively, from defining a task to accepting the finished software. The guide teaches the decisions, instructions and checks that produce reliable results.
 
-For example, “add an export button” leaves plenty of questions open. Which data should it export? Who can use it? What should happen when there's nothing to export? The guide will show you how to settle those questions, give the agent a useful task, and check the exported file through the application.
+For an export feature, define which data belongs in the file, who can export it, and what happens when there are no records. Give the agent those decisions, then verify the exported file through the application. The same approach applies across projects and problem domains.
 
 ## What you'll learn
 
@@ -19,15 +19,15 @@ For example, “add an export button” leaves plenty of questions open. Which d
 - Check that tests exercise the promised behavior.
 - Investigate failures without lowering the test's standards to get a pass.
 
-The agent's skills will use the same steps and expectations. You shouldn't have to explain the whole method again for every task.
+The agent's skills follow the same method. You and the agent work to a shared definition of a successful result.
 
 <h2 id="effective-agents">Effective Agents</h2>
 
-This is the planned book for humans. It will teach the method through worked examples: setting up a project, making a change, investigating a failure, and reviewing the result.
+The programmer's book teaches the method through worked examples: setting up a project, making a change, investigating a failure, and reviewing the result.
 
 <h2 id="machina-practica">Machina Practica</h2>
 
-This is the planned companion manual for agents and the people maintaining their instructions. It will explain the rules behind the skills and how to apply them in a repository. The project and this companion manual share a name.
+The companion manual explains the rules behind the skills and how to apply them in a repository. It is written for agents and the programmers maintaining their instructions. The project and this companion manual share a name.
 
 ## What's available
 
