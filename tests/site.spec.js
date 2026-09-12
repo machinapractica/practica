@@ -23,8 +23,9 @@ test('read the landing page and follow the books, method, and proposals', async 
   await test.step('Open the ordinary home page and verify truthful status', async () => {
     await page.goto('/');
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('Build software with agents');
+    await expect(page.locator('.lede')).toContainText('Machina Practica is a system for building reliable software.');
     await expect(page.locator('#parts + ol > li')).toHaveCount(3);
-    for (const role of ['A guide for you.', 'Skills for the agent.', 'Packages for the software.']) {
+    for (const role of ["A programmer's guide.", 'Skills for the agent.', 'Reusable software packages.']) {
       await expect(page.locator('#parts + ol')).toContainText(role);
     }
     await expect(page.locator('#expectations + p + ul')).toContainText('Expect zero pixel differences');
@@ -33,8 +34,8 @@ test('read the landing page and follow the books, method, and proposals', async 
     await record('01-home');
   });
   await test.step('Read the human guide and the project goals', async () => {
-    await page.getByRole('navigation').getByRole('link', { name: 'Human guide', exact: true }).click();
-    await expect(page.getByRole('heading', { name: 'The human guide' })).toBeVisible();
+    await page.getByRole('navigation').getByRole('link', { name: "Programmer's guide", exact: true }).click();
+    await expect(page.getByRole('heading', { name: "The programmer's guide" })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Effective Agents', exact: true })).toBeVisible();
     await record('02-human-guide');
     await page.getByRole('main').getByRole('link', { name: 'the goals behind it', exact: true }).click();
@@ -42,7 +43,7 @@ test('read the landing page and follow the books, method, and proposals', async 
     await record('03-goals');
   });
   await test.step('Read the agent instructions and follow the setup sequence', async () => {
-    await page.getByRole('navigation').getByRole('link', { name: 'Method & skills', exact: true }).click();
+    await page.getByRole('navigation').getByRole('link', { name: 'Skills', exact: true }).click();
     await expect(page.getByRole('heading', { name: 'What a skill does' })).toBeVisible();
     await expect(page.getByText('The current skill bundle is packaged for Codex.', { exact: false })).toBeVisible();
     await record('04-method');

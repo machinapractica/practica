@@ -8,7 +8,7 @@ export default function (config) {
   config.addGlobalData('build', { revision, dirty, short: revision.slice(0, 7) });
   config.addPassthroughCopy('site/assets');
   config.addTemplate('vision.md', readFileSync('VISION.md', 'utf8'), {
-    layout: 'base.njk', title: 'What we’re trying to build', description: 'A shared method for humans and coding agents, with instructions and components built for repeatable, reliable software.', permalink: '/vision/'
+    layout: 'base.njk', title: 'What we’re trying to build', description: 'A system for building reliable software, with a programmer’s guide, agent skills and reusable components.', permalink: '/vision/'
   });
   return { dir: { input: 'site', output: '_site' }, markdownTemplateEngine: false, htmlTemplateEngine: 'njk' };
 }

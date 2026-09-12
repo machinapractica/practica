@@ -115,3 +115,34 @@ I had the following feedback on teh website: "Reading through MachinaPractica.  
 ```
 
 PR reference for the 2026-09-12 website voice and purpose prompt: https://github.com/machinapractica/practica/pull/8. Includes the style guide, rewritten public pages and rendered vision, contributor guidance, and matching browser checks.
+
+## Refine the website voice from an edited example — 2026-09-12
+
+Actor: user. PR: pending. Apply the wording and style changes across the website and its style guide.
+
+```text
+Look at this edit and try to distill the style and wording changes to make another pass on the website: Now:
+
+Machina Practica is a method for humans and coding agents to build
+reliable software together. We're putting it into a human guide,
+instructions the agent can follow, and software packages it can
+reuse.
+
+You learn how to direct the work. The agent gets instructions that
+match your way of working. It uses tested components for the parts
+that don't need inventing again. The goal is to get reliable software
+built faster, with less repeated explanation and repair
+
+Edited:
+
+Machina Practica is a system for building reliable software.  It
+consists of a programmer's guide, skills to make the agent effective,
+and reusable software packages that ensure high quality results.
+
+You'll learn how to direct the agent effectively. The agent gets
+instructions that match this way of working. Tested components mean
+reliable results, across a variety of projects and problem domains.
+Welcome to the future of software development.
+```
+
+PR linkage for “Refine the website voice from an edited example — 2026-09-12”: https://github.com/machinapractica/practica/pull/9.

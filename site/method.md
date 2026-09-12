@@ -6,9 +6,9 @@ permalink: /method/
 ---
 # The method and agent skills
 
-Here, an agent is a coding tool built around a language model. It can read files, edit code and run tools. The method gives you and the agent a shared way to work. You decide what the software should do and what the agent is allowed to change. The agent follows instructions for the task, uses suitable components, and shows what it built and checked. You review the result against the job you agreed on.
+The system gives you and the agent a shared method for building reliable software. You define the result and direct the work. The agent applies the relevant skills, builds with tested components, and verifies what it delivers.
 
-The human guide teaches your part. The skills supply the agent's part. The packages supply reusable code. All three need to agree about what counts as finished.
+A coding agent uses a language model to read files, edit code and run tools. Skills make that agent effective by giving it clear instructions for each task.
 
 ## Work through one question at a time
 
@@ -19,28 +19,30 @@ The human guide teaches your part. The skills supply the agent's part. The packa
 5. **How will we build it in reviewable pieces?** Plan changes that each produce something you can try.
 6. **Does this change do its job?** Implement it, test it through the ordinary interface, and review the result.
 
-These steps separate different kinds of decisions. They don't require you to approve the same work repeatedly. You can authorize several steps together when you know what you want.
+Each step produces a clear result for the next. Authorize them individually or together to suit the work.
 
 For a more detailed walkthrough, read [setting up a project](/proposals/project-setup/).
 
 <h2 id="skills">What a skill does</h2>
 
-A skill is a set of instructions the coding agent reads when it takes on a task. It says what to inspect, what to produce, and how to check the work. It can include reference files and small tools.
+A skill gives the agent a repeatable procedure for a task: what to inspect, what to produce, and how to verify the result. Reference files and tools support the procedure.
 
-For example, the setup skill tells the agent to prove that a blank application builds and runs. It keeps the agent from adding an account system or database before you've decided the product needs one. The implementation skill asks it to test the requested behavior before taking a screenshot and reporting success.
+The setup skill establishes a working build and test environment. The implementation skill carries a change through to verified behavior. Each keeps the agent focused on the result you authorized.
 
 There are eight experimental skills: vision, domain research, project setup, product design, planning, implementation, audit, and a dispatcher that selects the appropriate skill. The audit skill inspects a project without changing it.
 
 ## Which agents can use this?
 
-The method isn't tied to one model. The current skill bundle is packaged for Codex. Its instructions are readable files, but another agent tool may need different packaging to load them. We haven't verified the bundle with every agent tool.
-
-You can [inspect the skills and bundle instructions](https://github.com/machinapractica/practica/blob/main/docs/SKILLS.md). Their structural checks pass, but they haven't yet been used to create a project. That still needs testing; valid instruction files alone don't prove reliable agent behavior.
+The method applies across coding agents. The current skill bundle is packaged for Codex. Other tools may need an adapter to load the instructions.
 
 ## What counts as a passing test?
 
-A test must perform the action it claims to test, wait for an observable result, and check that result. Then it can capture a screenshot and record what happened.
+A passing test performs the user action, waits for the expected state, and verifies the result. Screenshots and test records follow those checks.
 
 If the test sometimes fails, investigate the cause. Make event order explicit. Control the data, clock, randomness and external services. Use the same toolchain and rendering environment each time. Screenshot comparisons should then have zero pixel differences. Masking a changing area or increasing the allowed difference doesn't fix unexplained variation.
 
-An intentional visual change needs a reviewed new baseline. A different platform needs its own declared rendering environment. Neither is a reason to accept unexplained differences within the same environment.
+Review a new baseline for an intentional visual change. Declare a separate rendering environment for each platform. Within that environment, require exact results.
+
+## Current status
+
+Eight experimental skills are available. Their structural checks pass; project creation and use with other agent tools remain unverified. Read the [skills and bundle instructions](https://github.com/machinapractica/practica/blob/main/docs/SKILLS.md) for installation and validation details.
