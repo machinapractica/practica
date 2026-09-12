@@ -177,3 +177,5 @@ PR: pending
 ```text
 Hmm. This is still no good. I don't want the book to be a reference to the projects. I want it to bre a how to manual, a practical dive in and get started guide. Let's instead look at deepsea and its prompts, and make the chapter be about building a simple game as an introduction to the method. Let's get the user to build this game following the path that was chosen for deepsea (see its PROMPTS.md).
 ```
+
+PR linkage for “Teach through the Deepsea build — 2026-09-12”: https://github.com/machinapractica/practica/pull/12.
