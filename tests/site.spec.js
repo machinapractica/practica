@@ -44,7 +44,7 @@ test('read the landing page and follow the books, method, and proposals', async 
   });
   await test.step('Read the package status', async () => {
     await page.getByRole('navigation').getByRole('link', { name: 'Packages', exact: true }).click();
-    await expect(page.getByText('Status: experimental implementations, not yet published to npm.', { exact: false })).toBeVisible();
+    await expect(page.getByText('Status: experimental alpha releases on npm.', { exact: false })).toBeVisible();
     await expect(page.getByRole('link', { name: 'package extraction proposal' })).toHaveAttribute('href', 'https://github.com/machinapractica/packages/blob/main/docs/proposals/PACKAGE_EXTRACTION_PROPOSAL.md');
   });
   expect(failures).toEqual([]);

@@ -90,3 +90,16 @@ Recorded 2026-09-11 from human maintainer. PRs: pending reusable skills and pack
 PR reference for the 2026-09-11 reusable-components prompt: https://github.com/machinapractica/practica/pull/6. This PR contains the eight skills, shared resources and validation; it performs no source-repository migration or new-project creation.
 
 Distribution follow-up for PR #6: retain the validated plugin ZIP with CI evidence so the reusable bundle can be downloaded without global installation or generating a project.
+
+
+## npm publication continuation — 2026-09-12
+
+Actor: user. PR: pending. Continuing the authorized initial publication and trusted-publisher setup. Prompts received verbatim:
+
+> do you still require npm auth? it has gone stale, try again
+
+> done
+
+> done
+
+> done
