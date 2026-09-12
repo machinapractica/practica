@@ -2,30 +2,29 @@
 
 The programmer's guide to building reliable software with agents.
 
-**Review draft — 12 September 2026.** The book starts with establishing a product and building a working foundation. Only [Chapter 1: Describe the product](01-describe-the-product.md) is drafted; the remaining chapters are an outline.
+**Review draft — 12 September 2026.** Start with [Chapter 1: Build a game: Deep Sea](01-build-deep-sea.md). It gives you prompts to use, results to inspect and a game to build. The remaining chapters are an outline.
 
-The method is being extracted from the projects behind the Machina Practica components. The [source notes](SOURCE_NOTES.md) identify the repositories, revisions and observed practices behind this draft. Chapter order is our organization of those practices; the projects did not all follow an identical sequence.
+## Get started
 
-## Part I: Build a project that can be trusted
+1. **[Build a game: Deep Sea](01-build-deep-sea.md).** Begin in an empty directory. Describe the game, establish its rules, design the experience, publish a tested coming-soon page, then build multiplayer player journeys.
 
-1. **[Describe the product](01-describe-the-product.md).** Establish the product's purpose, intended experience and boundaries. Read the domain sources. Use the early Sudoku, Hunger, Player and RoboRally documents to understand what belongs in the foundation.
-2. **Make the blank application work.** Build and launch the target application, establish its test contract, identify the build, and prove the deployment or installation path. Compare the web foundations in Sudoku, Hunger, X-Wing and RoboRally with Player's native launch story.
-3. **Design the first useful journey.** Turn the product into a complete experience with explicit state, recovery and privacy decisions. Compare Hunger's check-ins, Player's import-to-playback path and the shared/private surfaces in the games.
-4. **Plan changes you can try.** Use the tracer plans from Hunger, Player, X-Wing and RoboRally: each increment crosses the real application and ends in a user-visible result. Preserve the differences in their commit and PR arrangements.
+## Understand each stage
 
-## Part II: Deliver reliable changes
+2. **Describe the product and understand its domain.** Keep the vision about the intended experience. Read the sources, resolve ambiguities and define the first useful product.
+3. **Design the experience.** Work through screens, actions, waiting states, errors and recovery before committing to implementation.
+4. **Establish the build and tests.** Make a small application run through the production build, browser checks and deployment path. Enforce the testing rules.
+5. **Plan complete increments.** Give each piece of work an outcome you can try. Bring infrastructure and interface together in usable previews.
 
-5. **Build with skills and shared components.** Follow the recorded reuse from Food and Jaipur into Hunger, and from Jaipur and RoboRally into X-Wing. Explain what Machina Practica is extracting from those local implementations and what still needs consumer validation.
-6. **Make results repeatable.** Work through the source projects' explicit inputs, isolated state, observable waits, semantic checks and reviewed screenshots. Apply the system's exact-comparison requirement while recording source deviations honestly.
-7. **Investigate a failure.** Develop a case study from a retained source fix, its test and its follow-up history. Select and inspect that history before drafting the chapter.
-8. **Review and release the result.** Connect a completed user journey to its walkthrough, screenshots, source revision and deployed or installed artifact. Preserve the native qualification limits documented in Player.
+## Deliver and maintain reliable software
 
-## Part III: Keep the system useful
+6. **Build with skills and shared components.** Use reusable instructions and software for established jobs, checking that they fit your product.
+7. **Make results repeatable.** Control inputs and the environment. Use observable state, deterministic replay and exact visual checks.
+8. **Investigate a failure.** Reproduce a defect, understand its cause, repair it and verify the result.
+9. **Review and release.** Try the real user journey, inspect its checks and identify the build that was deployed or installed.
+10. **Improve the shared system.** Turn repeated work into maintained skills and components, preserving the behavior that projects depend on.
 
-9. **Extract what repeats.** Compare implementations, separate common mechanics from product policy, and test compatibility. Use the testing and build-info extraction records; distinguish retained references from actual package adopters.
+## Draft status
 
-## Editorial work remaining
+Chapter 1 follows Deepsea's recorded prompt sequence through its working multiplayer lobby. Its final gameplay exercise follows the remaining implementation plan; that portion has not yet been completed in the source project or trialled as a reader tutorial. Review the teaching flow now; qualify the full build before publishing it as an exercised start-to-finish tutorial.
 
-Review the opening chapter against its sources, then draft the application-foundation chapter from the early shell commits and their launch tests. Later chapters need equally specific source studies before prose is written. No invented application or generic prompting prelude is part of this outline.
-
-The [book source and edition plan](../README.md) describes Markdown authorship and the planned Typst print editions.
+[Editorial source notes](SOURCE_NOTES.md) retain the provenance and limits outside the chapter. [Book source and editions](../README.md) describes Markdown authorship and planned Typst print editions.
