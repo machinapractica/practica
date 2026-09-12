@@ -179,3 +179,88 @@ Hmm. This is still no good. I don't want the book to be a reference to the proje
 ```
 
 PR linkage for “Teach through the Deepsea build — 2026-09-12”: https://github.com/machinapractica/practica/pull/12.
+
+## Validate the chapter through the framework — 2026-09-12
+
+Actor: user
+PR: pending
+
+```text
+no this is still not waht I want. I don't want the user to have to prompt about things like keeping the vision clear. that should be in the *skill* not in the *prompt*. we're building a system for creating these results, not literally telling people to do what I've done so far. the goal is to extract these methods so that we do not have to apply workarounds like that. do we have the vision skill defined yet? maybe spend some time actually trying to build deepsea using the framework and the prompts you are authoring and use that to both write and validate the chapter.
+```
+
+### Independent vision trial — 2026-09-12
+
+Actor: assistant to evaluation agent. Exact request follows.
+
+```text
+Work only in /Users/anicolao/projects/machinapractica/deepsea-framework-trial, an empty evaluation workspace. Read and use the skill at /Users/anicolao/projects/machinapractica/practica/plugins/machina-practica/skills/practica-vision/SKILL.md. Do not edit the skill or other repositories. No remote writes are authorized for this evaluation phase. Complete this request, then report the files created and any questions:
+
+$practica-vision I want to build Deep Sea Adventure as a multiplayer web game for friends on their own devices. Write the README and vision.
+```
+
+### Independent foundation trial — 2026-09-12
+
+Actor: assistant to evaluation agent.
+
+```text
+Continue in /Users/anicolao/projects/machinapractica/deepsea-framework-trial. Use the framework skills under /Users/anicolao/projects/machinapractica/practica/plugins/machina-practica/skills, starting with practica-project. Preserve the vision trial output for evaluation; do not edit the framework. Local git commits are permitted; remote writes are not. Record the request verbatim in the trial's PROMPTS.md. Report the actual result and verifier output, including screenshots for review.
+
+The vision is accepted. Use a faithful base-game adaptation for friends, with GPLv3 for our code. Use the rules and explicitly documented project conventions in https://github.com/anicolao/deepsea/blob/f7caf9f4d7473f637ac6cbc71509f545c59e8d9a/RULES_SUMMARY.md as the starting material.
+
+$practica-project Summarize the rules, then build and verify the blank web application. Keep this trial local for now.
+```
+
+### Independent playable-game trial — 2026-09-12
+
+Actor: assistant to evaluation agent.
+
+```text
+Continue in /Users/anicolao/projects/machinapractica/deepsea-framework-trial. Use the current framework skills under /Users/anicolao/projects/machinapractica/practica/plugins/machina-practica/skills, starting with practica-project and loading the skills it selects. Do not edit the framework or other repositories. Local git commits and dependency installation are permitted. Remote writes remain outside this trial. Record this request verbatim. This is a combined design/planning/implementation evaluation; you may make reasonable product decisions within the accepted intent and documented rules conventions. Report milestone progress and retain the result of each verifier run.
+
+The rules and blank app are accepted.
+
+$practica-project Design and plan the playable Deep Sea game, then implement the plan. Keep it local for this trial, with friends joining from separate browsers. I want to play a complete three-dive game and start another one.
+```
+
+### Concurrent-join review feedback — 2026-09-12
+
+Actor: assistant to evaluation agent.
+
+```text
+A parent review of the in-progress server reproduced a concurrency defect through its public HTTP interface: two overlapping joins both returned 201, but the final room contained only Host and Alice instead of Host, Alice and Bob. The reproduction is /tmp/deepsea-concurrent-join-review.mjs; it starts its own server and temporary data directory without modifying your files. The current practica-tracer skill now includes an explicit atomic acceptance and overlapping-request requirement. Read that updated skill, investigate this failure, and continue the authorized build and verification. Record this request verbatim and retain the failure plus the verified correction. Do not edit the framework.
+```
+
+### Out-of-order browser response review — 2026-09-12
+
+Actor: assistant to evaluation agent.
+
+```text
+Parent browser review of the T1 production artifact reproduced a second race. A host sees Alice join, then a delayed older GET response removes Alice from the host's roster until the next poll. The server still retains Alice. Reproduction: /tmp/deepsea-stale-view-review.mjs (isolated server, two ordinary browser users, one delayed real response; no source changes). The practica-tracer skill now also requires obsolete-response handling and response-reordering tests. Read the updated requirement, investigate the observed failure and continue the authorized build. Record this request verbatim and retain the correction's verification. Do not edit the framework.
+```
+
+### Fresh lobby forward test — 2026-09-12
+
+Actor: assistant to independent evaluation agent.
+
+```text
+Work only in /tmp/machina-deepsea-fresh-lobby, an isolated evaluation workspace containing accepted vision, rules, scaffold, design and implementation plan. Use the current skill at /Users/anicolao/projects/machinapractica/practica/plugins/machina-practica/skills/practica-tracer/SKILL.md and the references it selects. Do not edit the framework or other repositories. Local commits and dependency installation are permitted; remote writes are not. This evaluation authorizes only the first planned outcome, T1. Record this request verbatim and report actual artifacts, verification and any unresolved issues.
+
+$practica-tracer Implement the first planned outcome: friends create and join a room from separate browsers and recover their seats after reload.
+```
+
+### Fresh trial resource allocation — 2026-09-12
+
+Actor: assistant to independent evaluation agent.
+
+```text
+Evaluation harness resource allocation: another local trial owns 127.0.0.1:4179. Use 127.0.0.1:4189 for this isolated trial's application and browser verifier. Keep all application data within your own workspace. Record this harness constraint verbatim.
+```
+
+### Fresh trial fixed-wait policy failure — 2026-09-12
+
+Actor: assistant to evaluation agent after its independent report.
+
+```text
+Parent review found that your reported final source a04fe136 contains prohibited fixed waits in tests/launch.spec.mjs: 100 ms before captures and 150 ms after each delayed-response release. These invalidate its wait-policy acceptance despite the green verifier. Read the current practica-tracer skill and its updated web reference. The framework now includes a reusable AST-based fixed-wait checker with its own positive/negative tests. Correct the trial and integrate the framework's enforcement into its verifier, then retain actual verification and reviewed screenshot results. Record this feedback verbatim. Keep the scope at T1 and do not edit the framework or other repositories.
+```

@@ -10,6 +10,8 @@ run() {
   else result=$?; cat "evidence/$label.log"; exit "$result"; fi
 }
 run dependencies npm ci --ignore-scripts
+# Define check:browser-waits with the supplied checker or an existing equivalent lint rule.
+run wait-policy npm run check:browser-waits
 run production npm run build
 run browser npx --no-install playwright install chromium
 # Playwright webServer must launch the production output, not a development server.

@@ -72,6 +72,14 @@ Useful: “For an export feature, say which records belong in the file, who can 
 
 For the books, derive the method from the repositories supplying our components. Inspect their documents, code and history, retain exact source references, and use their actual examples. Write a hands-on guide from that research: tell the reader what to do, what to ask the agent, and what to try next. Keep project comparisons, historical explanations and source mappings in editorial notes, outside the main lesson. Do not invent a generic prompting process or fictional project as the basis of a chapter. Distinguish repeated practice from our proposed organization of it, and record source deviations from the reliability standard.
 
+## Let the skills carry the method
+
+Book prompts should name the product and the result the reader wants. Keep reusable procedure in the skills: document boundaries, prompt recording, package selection, verification and complete player journeys. Don't make the reader repeat instructions that the system is supposed to supply.
+
+When source history contains a corrective prompt, extract the correction into the appropriate skill. Test a short request with that skill. Use the resulting build to write and validate the lesson; don't claim that rewriting a historical prompt proves the method works.
+
+The reader still makes product decisions and tries the result. Teach those actions with concrete examples. Keep trial harness details, source mappings and observed limitations in the linked trial report.
+
 ## State the reliability expectations clearly
 
 Our method expects race conditions to be avoided by design, CI to be 100% repeatable in its declared environment, and screenshots to be fully deterministic. Don't soften that into “reduce flakiness” or advise readers to tolerate unexplained variation.

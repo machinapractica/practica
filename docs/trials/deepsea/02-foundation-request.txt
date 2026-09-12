@@ -1,0 +1,5 @@
+Continue in /Users/anicolao/projects/machinapractica/deepsea-framework-trial. Use the framework skills under /Users/anicolao/projects/machinapractica/practica/plugins/machina-practica/skills, starting with practica-project. Preserve the vision trial output for evaluation; do not edit the framework. Local git commits are permitted; remote writes are not. Record the request verbatim in the trial's PROMPTS.md. Report the actual result and verifier output, including screenshots for review.
+
+The vision is accepted. Use a faithful base-game adaptation for friends, with GPLv3 for our code. Use the rules and explicitly documented project conventions in https://github.com/anicolao/deepsea/blob/f7caf9f4d7473f637ac6cbc71509f545c59e8d9a/RULES_SUMMARY.md as the starting material.
+
+$practica-project Summarize the rules, then build and verify the blank web application. Keep this trial local for now.

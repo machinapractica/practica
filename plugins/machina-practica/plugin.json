@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "machina-practica",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Phase-scoped project skills and evidence contracts for disciplined agent-assisted development.",
   "author": {
     "name": "Machina Practica",

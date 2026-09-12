@@ -50,4 +50,4 @@ Before changing public copy, read [the website style guide](docs/WEBSITE_STYLE_G
 
 Before drafting book methodology, inspect the source repositories behind the component extraction. Follow [the book source conventions](books/README.md) and retain revision-pinned evidence in the book's source notes. Use actual project examples; do not invent a process and then illustrate it. Distinguish observed practice, synthesis and source deviations.
 
-Book chapters must teach the reader to do the work. Keep repository comparisons and prompt-history mappings in source notes. For the introductory build, follow Deepsea's recorded sequence rather than imposing the generalized phase order.
+Book chapters must teach the reader to do the work. Keep repository comparisons and prompt-history mappings in source notes. For the introductory build, use Deepsea's recorded work as research and validate the teaching prompts by building with the framework. Product intent and choices belong in reader prompts; reusable procedure and corrective instructions belong in the skills. Do not turn historical workarounds into instructions the reader must repeat.

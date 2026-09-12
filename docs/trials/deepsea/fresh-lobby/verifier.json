@@ -1,0 +1,50 @@
+{
+  "contract": "1.0.1",
+  "revision": "0b8fe15d4dcdda12e0f38795856f1f277581a55a",
+  "mode": "reviewed",
+  "run": "/private/tmp/machina-deepsea-fresh-lobby/evidence/runs/0b8fe15d4dcdda12e0f38795856f1f277581a55a/2026-09-12T16-25-22.207Z",
+  "status": "passed",
+  "checks": [
+    {
+      "label": "dependencies",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "wait-policy",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "production",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "contracts",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "browser-install",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "scenarios",
+      "status": "passed",
+      "exitCode": 0
+    }
+  ],
+  "build": {
+    "revision": "0b8fe15d4dcdda12e0f38795856f1f277581a55a",
+    "files": {
+      "index.html": "bb072046aab8706661b997a35dcc50273bccb22509ee77ec069237c8b1fed90b",
+      "style.css": "7da3cb1cbab7b66b436c45cbff0cd312451925b554a52b5ce38b8e3cafae41f5",
+      "app.js": "d9a03d61bef643a011e8026071dd416451bf0b25340f0f779013550d457af5c3",
+      "font.woff2": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757",
+      "FONT_LICENSE.txt": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7"
+    },
+    "artifact": "e98fec85dc813dc63e5f05b5d1f324fc553de8650f7c7ea6df0c5619300162a8"
+  }
+}

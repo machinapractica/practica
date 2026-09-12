@@ -45,4 +45,4 @@ Review a new baseline for an intentional visual change. Declare a separate rende
 
 ## Current status
 
-Eight experimental skills are available. Their structural checks pass; project creation and use with other agent tools remain unverified. Read the [skills and bundle instructions](https://github.com/machinapractica/practica/blob/main/docs/SKILLS.md) for installation and validation details.
+Eight experimental skills are available. Their structural checks pass, and a [Deep Sea build trial](https://github.com/machinapractica/practica/blob/main/docs/trials/deepsea/README.md) tests them in a new local project. Other agent hosts remain unqualified. Read the [skills and bundle instructions](https://github.com/machinapractica/practica/blob/main/docs/SKILLS.md) for installation and validation details.

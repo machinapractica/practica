@@ -1,0 +1,3 @@
+Work only in /Users/anicolao/projects/machinapractica/deepsea-framework-trial, an empty evaluation workspace. Read and use the skill at /Users/anicolao/projects/machinapractica/practica/plugins/machina-practica/skills/practica-vision/SKILL.md. Do not edit the skill or other repositories. No remote writes are authorized for this evaluation phase. Complete this request, then report the files created and any questions:
+
+$practica-vision I want to build Deep Sea Adventure as a multiplayer web game for friends on their own devices. Write the README and vision.

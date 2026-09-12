@@ -1,0 +1,21 @@
+
+Running 10 tests using 1 worker
+
+  ✓   1 [phone] › tests/e2e/game.spec.mjs:4:1 › friends play and recover a complete first dive (6.6s)
+  ✓   2 [phone] › tests/e2e/lobby.spec.mjs:3:1 › friends create, join and recover a shared lobby (3.7s)
+  ✓   3 [phone] › tests/e2e/loss.spec.mjs:4:1 › oxygen exhaustion completes the turn and owners order their losses (15.1s)
+  ✓   4 [phone] › tests/e2e/match.spec.mjs:4:1 › friends finish three dives, see winners and play another game (21.6s)
+  ✓   5 [phone] › tests/e2e/reordering.spec.mjs:3:1 › late poll success and failure cannot roll back a newer room view (3.5s)
+  ✓   6 [desktop] › tests/e2e/game.spec.mjs:4:1 › friends play and recover a complete first dive (8.3s)
+  ✓   7 [desktop] › tests/e2e/lobby.spec.mjs:3:1 › friends create, join and recover a shared lobby (3.6s)
+  ✓   8 [desktop] › tests/e2e/loss.spec.mjs:4:1 › oxygen exhaustion completes the turn and owners order their losses (16.4s)
+  ✓   9 [desktop] › tests/e2e/match.spec.mjs:4:1 › friends finish three dives, see winners and play another game (21.9s)
+  ✓  10 [desktop] › tests/e2e/reordering.spec.mjs:3:1 › late poll success and failure cannot roll back a newer room view (3.9s)
+
+  10 passed (1.8m)
+[WebServer] (node:80699) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:80702) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

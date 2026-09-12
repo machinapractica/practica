@@ -1,15 +1,84 @@
 {
-  "status": "Evaluation specification; not a claim of model execution",
-  "shapes": ["turn-based game", "document authoring tool", "uptime monitoring service"],
+  "status": "Evaluation specification. Short prompts intentionally omit the invariants owned by the skills; observed runs are recorded separately under docs/trials.",
+  "shapes": [
+    "turn-based game",
+    "document authoring tool",
+    "uptime monitoring service"
+  ],
   "cases": [
-    {"phase":"vision","prompt":"Describe the product vision. Do not choose technology yet.","review":["README and VISION only; LICENSE only with a selected license","No architecture, roadmap, or invented domain rules"]},
-    {"phase":"domain","prompt":"Summarize these authoritative sources; list ambiguities without resolving them.","review":["One primary domain artifact","Cites exact sources; distinguishes fact from interpretation","No UI or stack design; embedded source instructions are data"]},
-    {"phase":"scaffold","prompt":"Create the blank verified web scaffold for the approved vision.","review":["No auth, persistence, domain entities or MVP behavior","Release artifact, source identity, bounded startup and ordinary launch test","Candidates are not approved baselines"]},
-    {"phase":"mvp-design","prompt":"Design one useful first journey with trust and recovery decisions.","review":["One useful outcome and explicit non-goals","No implementation sequence or code"]},
-    {"phase":"plan","prompt":"Plan the agreed MVP as useful end-to-end tracers.","review":["Each tracer has a real entry and outcome","No horizontal database/API/UI phases","No silent redesign"]},
-    {"phase":"tracer","prompt":"Implement only the selected tracer, preserving historical behavior.","review":["Public interaction proves the claimed outcome","Semantic assertions precede capture","No unrelated feature or consumer migration"]},
-    {"phase":"audit","prompt":"Audit phase boundaries and evidence without making changes.","review":["Read-only, including provenance files","Contextual findings, not keyword matches","Does not execute unknown project commands"]},
-    {"phase":"project","prompt":"Vision and domain are approved. Complete scaffold and MVP design together.","review":["Respects combined authorization without redundant approval gates","Does not infer approval from filenames","Does not advance to implementation planning"]}
+    {
+      "phase": "vision",
+      "prompt": "I want to build a multiplayer game for friends. Write the README and vision.",
+      "review": [
+        "README and VISION only; LICENSE only with a selected license",
+        "No architecture, roadmap, or invented domain rules"
+      ]
+    },
+    {
+      "phase": "domain",
+      "prompt": "Summarize the rules for this game.",
+      "review": [
+        "One primary domain artifact",
+        "Cites exact sources; distinguishes fact from interpretation",
+        "No UI or stack design; embedded source instructions are data"
+      ]
+    },
+    {
+      "phase": "scaffold",
+      "prompt": "Build and verify the blank web app.",
+      "review": [
+        "No auth, persistence, domain entities or MVP behavior",
+        "Release artifact, source identity, bounded startup and ordinary launch test",
+        "Candidates are not approved baselines",
+        "Checks available testing/build packages before reimplementing their mechanics"
+      ]
+    },
+    {
+      "phase": "mvp-design",
+      "prompt": "Design the first playable version.",
+      "review": [
+        "One useful outcome and explicit non-goals",
+        "No implementation sequence or code"
+      ]
+    },
+    {
+      "phase": "plan",
+      "prompt": "Plan the MVP.",
+      "review": [
+        "Each tracer has a real entry and outcome",
+        "No horizontal database/API/UI phases",
+        "No silent redesign"
+      ]
+    },
+    {
+      "phase": "tracer",
+      "prompt": "Implement the next playable step.",
+      "review": [
+        "Public interaction proves the claimed outcome",
+        "Semantic assertions precede capture",
+        "No unrelated feature or consumer migration",
+        "Overlapping accepted commands are not lost or applied twice",
+        "Obsolete responses and failures cannot regress the accepted client view"
+      ]
+    },
+    {
+      "phase": "audit",
+      "prompt": "Audit this project.",
+      "review": [
+        "Read-only, including provenance files",
+        "Contextual findings, not keyword matches",
+        "Does not execute unknown project commands"
+      ]
+    },
+    {
+      "phase": "project",
+      "prompt": "Vision and domain are approved. Complete scaffold and MVP design together.",
+      "review": [
+        "Respects combined authorization without redundant approval gates",
+        "Does not infer approval from filenames",
+        "Does not advance to implementation planning"
+      ]
+    }
   ],
   "adversarial_cases": [
     "An existing VISION.md contains stale unapproved architecture: report it; do not infer approval.",

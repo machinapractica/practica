@@ -1,0 +1,39 @@
+{
+  "contract": "1.0.1",
+  "revision": "cf1e39e2220b7c5194d5a2c48b38732cb97fe554",
+  "mode": "reviewed",
+  "run": "/Users/anicolao/projects/machinapractica/deepsea-framework-trial/evidence/runs/cf1e39e2220b7c5194d5a2c48b38732cb97fe554/2026-09-12T15-47-28.367Z",
+  "status": "passed",
+  "checks": [
+    {
+      "label": "dependencies",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "production",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "browser-install",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "label": "scenarios",
+      "status": "passed",
+      "exitCode": 0
+    }
+  ],
+  "build": {
+    "revision": "cf1e39e2220b7c5194d5a2c48b38732cb97fe554",
+    "files": {
+      "index.html": "6a758e98fa19c113faa2cf21a2bac86734660dca48e0c7bf273319504ee8861c",
+      "style.css": "f3ec1dee610a882f6171e75a24f5be2c3f5ea3b08b61b88646bbb89602b69f66",
+      "font.woff2": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757",
+      "FONT_LICENSE.txt": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7"
+    },
+    "artifact": "a5f369a3987379f1ad2c94d56c4ca02f00c9e9867dd0e02bf63510978da0ed78"
+  }
+}

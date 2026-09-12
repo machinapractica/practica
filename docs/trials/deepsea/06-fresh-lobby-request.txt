@@ -1,0 +1,3 @@
+Work only in /tmp/machina-deepsea-fresh-lobby, an isolated evaluation workspace containing accepted vision, rules, scaffold, design and implementation plan. Use the current skill at /Users/anicolao/projects/machinapractica/practica/plugins/machina-practica/skills/practica-tracer/SKILL.md and the references it selects. Do not edit the framework or other repositories. Local commits and dependency installation are permitted; remote writes are not. This evaluation authorizes only the first planned outcome, T1. Record this request verbatim and report actual artifacts, verification and any unresolved issues.
+
+$practica-tracer Implement the first planned outcome: friends create and join a room from separate browsers and recover their seats after reload.
