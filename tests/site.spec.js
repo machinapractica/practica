@@ -58,8 +58,8 @@ test('read the landing page and follow the books, method, and proposals', async 
   await test.step('Read the package status', async () => {
     await page.getByRole('navigation').getByRole('link', { name: 'Packages', exact: true }).click();
     await expect(page.getByRole('heading', { name: 'Reusable software packages', exact: true })).toBeVisible();
-    await expect(page.getByText('Two experimental packages are published at', { exact: false })).toBeVisible();
-    await expect(page.locator('pre')).toContainText('@machinapractica/testing@0.1.0-alpha.0');
+    await expect(page.getByText('The testing package is at', { exact: false })).toBeVisible();
+    await expect(page.locator('pre')).toContainText('@machinapractica/testing@0.1.0-alpha.1');
     await expect(page.locator('pre')).toContainText('@machinapractica/build-info@0.1.0-alpha.0');
     await expect(page.getByRole('link', { name: 'package extraction proposal' })).toHaveAttribute('href', 'https://github.com/machinapractica/packages/blob/main/docs/proposals/PACKAGE_EXTRACTION_PROPOSAL.md');
     await record('06-packages');

@@ -15,7 +15,7 @@ Document the one verifier command, production server command, bounded startup ch
 
 ## Wait-policy enforcement
 
-Name the verifier stage that rejects `waitForTimeout` references in browser-test source, and retain a negative fixture showing that it fails. Use the supplied AST checker or an equivalent linter. Review other timers and readiness conditions in context. A deadline can bound a wait; a fixed delay cannot prove readiness or that a delayed response was handled. Font or raster settling is not an exception.
+Name the verifier stage that runs `mp-testing check` and confirm `mp-testing setup` installed the staged pre-commit check and persistent package scripts. Use the package-owned policy; its packed-install tests cover rejected commits. Review other timers and readiness conditions in context. A deadline can bound a wait; a fixed delay cannot prove readiness or that a delayed response was handled. Font or raster settling is not an exception.
 
 ## Review and delivery
 

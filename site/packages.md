@@ -12,11 +12,13 @@ The skills guide the work. The packages provide the code. Together, they let the
 
 ## Available now
 
-Two experimental packages are published at `0.1.0-alpha.0`. Both are early releases. The [Deep Sea trial](https://github.com/machinapractica/practica/blob/main/docs/trials/deepsea/README.md) uses them in a new local application; adoption in the existing source projects remains future work.
+The testing package is at `0.1.0-alpha.1`; build-info is at `0.1.0-alpha.0`. Both are early releases. The [Deep Sea trial](https://github.com/machinapractica/practica/blob/main/docs/trials/deepsea/README.md) uses them in a new local application; adoption in the existing source projects remains future work.
 
 ### @machinapractica/testing
 
 Record verified test results with bounded waits, separate browser sessions for each user, screenshot records, and file hashes. The package runs checks before captures and preserves failed results.
+
+Installing it also adds a Git commit check for fixed sleeps in tests. The project setup skill configures this check and its CI command automatically. Existing commit hooks keep working.
 
 Exact pixel comparisons support deterministic screenshots. Combine them with controlled inputs and a fixed rendering environment to get repeatable results.
 
@@ -31,11 +33,12 @@ Read the [build-info package instructions](https://github.com/machinapractica/pa
 ## Try an explicit alpha version
 
 ```sh
-npm install @machinapractica/testing@0.1.0-alpha.0
+npm install --save-dev --save-exact @machinapractica/testing@0.1.0-alpha.1
+npx --no-install mp-testing setup
 npm install @machinapractica/build-info@0.1.0-alpha.0
 ```
 
-Choose the package you need. Both use GPLv3. The first releases were published from the tested local artifacts. GitHub trusted publishing is configured for future releases; those first versions have no GitHub provenance attestation.
+Choose the package you need. Both use GPLv3. The first releases were published from the tested local artifacts. Those initial versions have no GitHub provenance attestation. Testing alpha.1 uses GitHub trusted publishing.
 
 ## Adoption and validation
 

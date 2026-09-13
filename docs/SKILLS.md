@@ -26,9 +26,9 @@ The vision skill owns the document boundaries. The user does not need to repeat 
 
 ## Browser wait enforcement
 
-The web resources include `check-browser-waits.mjs`, an AST-based check for Playwright's forbidden `waitForTimeout` API. Copy it into a web project's verifier and pin `@babel/parser` (tested with 8.0.5), or use an equivalent existing lint rule. It handles JS/TS member references, including optional access, literal computed access and direct/destructured method aliases; it ignores comments and string examples. It does not prove arbitrary timer logic is sound. The profile requires a failing prohibited-call fixture and semantic review of other waits.
+Web project setup installs `@machinapractica/testing` and runs `mp-testing setup`. The package owns the fixed-wait checker and Git hooks; the skill no longer copies a checker or asks the programmer to request one. Setup preserves existing hooks and adds prepare/pretest commands. CI runs `mp-testing check` explicitly. The package checks recognizable fixed sleeps in JS/TS test sources; other timer logic still needs review.
 
-The website verifier exercises the checker and its three tests. The fresh Deep Sea trial integrated it after review found fixed sleeps in an otherwise passing run; an inserted violation failed verification, and the corrected trial passed without the sleeps.
+The website verifier runs the package check. The earlier fresh Deep Sea trial integrated the standalone checker after review found fixed sleeps in an otherwise passing run; an inserted violation failed verification, and the corrected trial passed without the sleeps.
 
 ## Validate the bundle
 
@@ -36,7 +36,7 @@ Validate and package from the repository root:
 
 ```sh
 python3 -m unittest discover -s plugins/machina-practica/scripts -p 'test_*.py'
-python3 plugins/machina-practica/scripts/validate_bundle.py --archive .artifacts/machina-practica-0.1.1.zip
+python3 plugins/machina-practica/scripts/validate_bundle.py --archive .artifacts/machina-practica-0.1.2.zip
 ```
 
 The archive is reproducible and includes both portable `plugin.json` and the Codex compatibility manifest. It follows the [official plugin layout](https://developers.openai.com/plugins/build/plugins). Install the `plugins/machina-practica` directory through a host that supports that layout; this repository does not modify global agent configuration or enable skills in other projects.
