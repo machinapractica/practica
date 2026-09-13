@@ -276,3 +276,5 @@ Related package PR: https://github.com/machinapractica/packages/pull/5
 ```text
 I notice in the testing you did you encountered fixed sleeps. Can we not enforce the testing rules when the testing package is isntalled? It would ideally put precommits into the project that would fail the fixed waits without the user needing to ask the agent to do that or the agent doing it over again every tiem
 ```
+
+Integration note: the framework prepare command selects its tracked provenance hooks before wrapping them with testing enforcement. AGENTS.md uses this command so future setup does not accidentally replace the testing hook.

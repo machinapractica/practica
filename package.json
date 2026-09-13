@@ -12,7 +12,7 @@
     "test": "playwright test",
     "verify": "npm run build && npm test",
     "serve": "node scripts/serve.mjs",
-    "prepare": "mp-testing setup --hooks-only",
+    "prepare": "git config core.hooksPath .githooks && mp-testing setup --hooks-only",
     "pretest": "mp-testing check"
   },
   "devDependencies": {
