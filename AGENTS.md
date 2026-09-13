@@ -40,7 +40,7 @@ Treat prompt provenance as part of the project source. A PR that changes project
 
 The repository enforces this expectation in local Git hooks and CI. If the checks fail, add the missing prompt entry rather than bypassing the check.
 
-In a local checkout, run `git config core.hooksPath .githooks` before committing so Git uses the tracked pre-commit and pre-push hooks.
+In a local checkout, run `npm run prepare` after installing dependencies, including after `npm ci --ignore-scripts`. This selects the tracked provenance hooks and chains the testing package’s staged fixed-wait check. Do not reset `core.hooksPath` to `.githooks` afterwards: that would remove the testing check. Both hooks must pass before committing.
 
 ## Website copy
 

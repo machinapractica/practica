@@ -266,3 +266,15 @@ Parent review found that your reported final source a04fe136 contains prohibited
 ```
 
 PR linkage for “Validate the chapter through the framework — 2026-09-12” and its associated evaluation requests: https://github.com/machinapractica/practica/pull/13.
+
+## Package-owned testing enforcement — 2026-09-13
+
+Actor: user
+PR: https://github.com/machinapractica/practica/pull/14
+Related package PR: https://github.com/machinapractica/packages/pull/5
+
+```text
+I notice in the testing you did you encountered fixed sleeps. Can we not enforce the testing rules when the testing package is isntalled? It would ideally put precommits into the project that would fail the fixed waits without the user needing to ask the agent to do that or the agent doing it over again every tiem
+```
+
+Integration note: the framework prepare command selects its tracked provenance hooks before wrapping them with testing enforcement. AGENTS.md uses this command so future setup does not accidentally replace the testing hook.

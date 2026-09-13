@@ -20,3 +20,7 @@ The [package repository](https://github.com/machinapractica/packages) contains s
 Later event/transport/room/tabletop packages remain behind the proposal's historical compatibility and lower-layer adoption gates. PWA/Pages extraction awaits stable build identity and retained offline/deployment fixtures. No empty packages, fabricated histories or demo adoption counts were introduced to bypass those gates.
 
 Read [skill usage and limits](SKILLS.md) for commands. Original research proposals remain intact; this status record does not rewrite their acceptance criteria.
+
+## Package-owned testing enforcement — 2026-09-13
+
+Bundle 0.1.2 delegates fixed-wait policy and Git hook setup to `@machinapractica/testing@0.1.0-alpha.1`. Web setup runs the package command automatically, including after installs with lifecycle scripts disabled. The copied AST checker and its duplicate tests are removed. The website uses the same package check in its verifier. Historical Deep Sea trial records remain unchanged; those trials used the earlier checker.
